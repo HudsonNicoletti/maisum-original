@@ -1,0 +1,56 @@
+mixin testimony()
+    .testimony
+        p  A única possibilidade de Mudar o Mundo de uma forma global é começar essas mudanças de forma local.
+        h4 Fábio 
+            small Rodrigo de Almeida
+            
+mixin cause(image,title,gathered,needed,link)
+    .item
+        figure
+            img(src=image, alt=title)
+        p!=title
+        .values
+            .data.gathered
+                span.thousand!=gathered
+                small Conseguidos
+            i.of de
+            .data.needed
+                span.million!=needed
+                small Necessários
+        a.cta(href=link) Doe
+        
+mixin partners()
+    .partner
+        img(src="assets/images/content/partners/01.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/02.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/03.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/04.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/05.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/06.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/07.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/08.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/09.png", alt="Agência dZoë")
+    .partner
+        img(src="assets/images/content/partners/10.png", alt="Agência dZoë")
+        
+
+mixin footer()
+    footer
+        .container
+            .newsletter
+                img(src="assets/images/logo/default.png", alt="Mais Um")
+                form.signup(action="")
+                    input(type="text",placeholder="Seu E-Mail")
+                    button(type="submit") Fique Atualizado !
+        .copyright
+            .container
+                p &copy; mais um - Todos os direitos reservados - 2015
+                a(href="http://www.agenciadzoe.com.br").developer: img(src="http://www.agenciadzoe.com.br/assets/public/images/logo.png" alt="Agência dZoë" height="30")

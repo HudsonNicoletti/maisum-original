@@ -1,0 +1,107 @@
+section.slider-cta
+    width: 100%
+    height: auto
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    
+    @media( max-width: 960px )
+        flex-direction: column
+    
+    .box
+        width: 33.3%
+        height: 430px
+        background:
+            image: url('../images/logo/mobile-alt.png')
+            repeat: no-repeat
+            size: contain
+            position: center center
+        position: relative
+        padding: 15px
+            
+        &:before , &:after
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 1
+            
+        &:nth-child(1):after
+            background-color: rgba( darken( $_primary-green , 10% ) , 0.86 )
+        
+        &:nth-child(2):after
+            background-color: rgba( darken( $_primary-green , 20% ) , 0.87 )
+        
+        &:nth-child(3):after
+            background-color: rgba( darken( $_primary-green , 30% ) , 0.91 )
+        
+        @media( max-width: 960px )
+            width: 100%
+            
+        .content
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            width: calc( 100% - 50px )
+            height: 100%
+            padding: 25px
+            text-align: center
+            z-index: 2
+            position: absolute
+            
+            h3.title
+                font:
+                    size: responsive 46px 60px
+                    weight: 400
+                    family: Raleway
+                color: $_primary-white
+                margin-top: 20px
+                margin-bottom: 33px
+                padding-bottom: 10px
+                line-height: 60px
+                position: relative
+
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 60px
+                    margin-left: -25px
+                    height: 4px
+                    background-color: rgba( $_primary-white , 0.7 )
+                    bottom: -12px
+                    left: 50%
+                
+                @media screen and ( min-width: 960px ) and ( max-width: 1200px )
+                    margin-top: 20px
+                    margin-bottom: 33px
+                    padding-bottom: 10px
+                    line-height: 50px
+                    font:
+                        size: 50px
+
+            p.subtitle
+                opacity: 0.8
+                font:
+                    size: responsive 18px 24px !important
+                    family: Raleway
+                color: $_primary-white
+                line-height: 1.6em
+
+            a
+                display: block
+                background: rgba( $_primary-white , 0 )
+                border: solid 2px $_primary-white
+                color: $_primary-white
+                padding: 10px 30px
+                letter-spacing: 0.25em
+                text-transform: uppercase
+                transition: all 0.15s linear 0s
+                
+                &:hover
+                    background: rgba( $_primary-white , 1 )
+                    color: $_primary-black

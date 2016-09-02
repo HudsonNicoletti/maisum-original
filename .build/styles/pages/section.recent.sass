@@ -1,0 +1,127 @@
+section.recent
+    padding: 15px
+    
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 40px 0
+        border-bottom: 1px solid $_primary-green
+        
+        @media( max-width: 960px )
+            width: 100%
+            
+        .causes
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            
+            .item
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                padding: 15px
+                
+                figure
+                    width: 100%
+                    img
+                        width: 100%
+                p
+                    display: inline-block
+                    width: 100%
+                    color: $_primary-greyD
+                    font:
+                        size: 18px
+                        family: Open Sans
+                    text-align: center
+                    
+                .values
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: row
+                    
+                    i.of
+                        font:
+                            size: 24px
+                            family: Open Sans
+                            weight: 300
+                        color: $_primary-greyD
+                        padding: 20px 10px 0 10px
+                        
+                    .data
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        flex-direction: column
+                        
+                        small
+                            text-transform: uppercase
+                            padding: 0
+                            margin: 0
+                            font:
+                                size: 16px
+                                family: Open Sans
+                                weight: 400
+                        
+                    span
+                        font:
+                            size: 50px
+                            family: Open Sans
+                            weight: 900
+                        color: $_primary-green
+                        
+                        &:before
+                            content: "R$"
+                            font:
+                                size: 32px
+                                family: Open Sans
+                                weight: 900
+                            color: $_primary-greyD !important
+                        
+                        &.thousand                        
+                            &:after
+                                content: "k"
+                                font:
+                                    size: 28px
+                                    family: Open Sans
+                                    weight: 900
+                                    color: $_primary-greyD !important
+                        
+                        &.million                        
+                            &:after
+                                content: "kk"
+                                font:
+                                    size: 28px
+                                    family: Open Sans
+                                    weight: 900
+                                    color: $_primary-greyD !important
+                        
+                        &.billion                        
+                            &:after
+                                content: "kkk"
+                                font:
+                                    size: 28px
+                                    family: Open Sans
+                                    weight: 900
+                                    color: $_primary-greyD !important
+                        
+                a
+                    display: inline-block
+                    background: rgba( $_primary-black , 0 )
+                    border: solid 1px $_primary-black
+                    color: $_primary-black
+                    padding: 10px 30px
+                    letter-spacing: 0.25em
+                    text-transform: uppercase
+                    transition: all 0.15s linear 0s
+                    margin: 30px 0
+
+                    &:hover
+                        background: rgba( $_primary-black , 1 )
+                        color: $_primary-white

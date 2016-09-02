@@ -1,0 +1,46 @@
+section.about-stats
+    padding: 15px
+    background:
+        color: $_primary-green
+    
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        padding: 40px 0
+        
+        @media( max-width: 960px )
+            flex-direction: column
+            width: 100%
+            
+        .stats
+            width: 33.3%
+            padding: 15px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            
+            @media( max-width: 960px )
+                width: 100%
+                
+            i
+                font:
+                    size: 38px
+                    weight: 300
+                
+            span
+                font:
+                    family: Open Sans
+                    size: 44px
+                    weight: 900
+                color: $_primary-white
+                
+            small
+                font:
+                    family: Open Sans
+                    size: 18px
+                    weight: 300
+                color: $_primary-greyD
+                text-transform: uppercase
