@@ -1,0 +1,63 @@
+section.ambassador
+  background:
+    color: $_primary-blue
+    repeat: no-repeat
+    size: cover
+    position: center center
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+
+    @media( max-width: 960px )
+      width: 100%
+      flex-direction: column
+
+
+    .world
+      background:
+        image: url("../images/content/world.png")
+        repeat: no-repeat
+        position: center
+        size: contain
+      width: 25%
+      height: 222px
+      margin: 15px 0
+    .text
+      width: 75%
+
+      span
+        display: block
+        width: 100%
+        color: $_primary-white
+        font:
+          family: Lato
+          size: 32px
+          weight: 100
+        text-transform: uppercase
+
+      a
+        background-color: $_primary-white
+        color: $_primary-blue
+        text:
+          transform: uppercase
+          decoration: none
+        display: inline-block
+        padding: 10px 45px
+        border-radius: 45px
+        border: 2px solid $_primary-blue
+        box-sizing: border-box
+        transition: all .3s linear
+        font:
+          family: Lato
+          size: 20px
+          weight: 100
+        float: right
+        margin-bottom: 10px
+
+        &:hover
+          background-color: $_primary-blue
+          color: $_primary-white
+          border: 2px solid $_primary-white

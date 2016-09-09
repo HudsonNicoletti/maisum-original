@@ -13,10 +13,14 @@ section.contact
 
         .info-box
             display: flex
-            align-items: center
+            align-items: flex-start
             justify-content: center
             flex-direction: row
             padding: 15px 0
+<<<<<<< HEAD
+=======
+            width: 100%
+>>>>>>> 34a9a7cb31d5b25c532a07a2387864fa12d28fad
 
             @media( max-width: 960px )
                 flex-direction: column
@@ -27,6 +31,10 @@ section.contact
                 justify-content: center
                 flex-direction: column
                 padding: 15px
+                width: 50%
+
+                @media( max-width: 960px )
+                    width: 100%
 
                 i
                     font:
@@ -40,6 +48,8 @@ section.contact
                         size: 20px
                         weight: 100
                     color: $_primary-black
+                    display: block
+                    width: 100%
 
         form.contact
             display: flex
