@@ -11,37 +11,23 @@
   </head>
   <body class="home">
     <header data-scroll-index="1">
-      <div class="info-section">
-        <ul>
-          <li><i class="fa fa-map-marker"> </i>4321 YOUR ADDRESS, COUNTRY</li>
-          <li><i class="fa fa-phone"></i> 8 (800) 695-2684</li>
-          <li><i class="fa fa-envelope-o"></i>SUPPORT@MERCYHEART.COM</li>
-        </ul>
-        <form action="" class="search">
-          <input type="text" placeholder="Pesquisar ...">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
       <div class="main-section">
         <div class="logo"></div>
-        <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-youtube-play"></i></a><a href="#"><i class="fa fa-google"></i></a></div>
+        <div class="social"><a href="/blog"><i class="fa fa-newspaper-o"></i></a><a href="https://www.facebook.com/redemaisum/"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/redemais1"><i class="fa fa-twitter"></i></a><a href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"><i class="fa fa-youtube-play"></i></a><a href="https://www.instagram.com/redemaisum/"><i class="fa fa-instagram"></i></a></div>
       </div>
       <nav>
         <div class="menu-logo"></div>
         <div class="menu-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         <ul>
-          <li data-scroll-nav="1"><a href="#">Home</a></li>
-          <li data-scroll-nav="2"><a href="#">Interaja + </a></li>
-          <li data-scroll-nav="3"><a href="#">Crie Experiências</a></li>
-          <li data-scroll-nav="4"><a href="#">Senso de Urgência</a></li>
-          <li data-scroll-nav="5"><a href="#">sobre</a></li>
-          <li data-scroll-nav="5"><a href="#">embaixadores</a></li>
+          <li data-scroll-nav="2"><a href="#">Faça o Bem</a></li>
+          <li data-scroll-nav="3"><a href="#">Interaja + </a></li>
+          <li data-scroll-nav="4"><a href="#">Causas</a></li>
+          <li><a href="#">Sobre</a></li>
           <li data-scroll-nav="5"><a href="#">Parceiros</a></li>
-          <li data-scroll-nav="6"><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
-    <section class="slider">
+    <section data-scroll-index="1" class="slider">
       <ul class="slides-container">
         <li style="background-image: url('assets/images/slider/01.jpg')">
           <div class="container">
@@ -63,33 +49,352 @@
         </li>
       </ul>
     </section>
-    <section class="slider-cta">
-      <div class="box">
-        <div class="content">
-          <h3 class="title">Você</h3>
-          <p class="subtitle">Dentro da mais um, vocÊ pode escolher a melhor forma de ajudar.</p><a href="">saiba mais</a>
+    <section data-scroll-index="2" data-tab-set="1" class="tabbed">
+      <div class="header">
+        <div class="container">
+          <h2 class="title">Faça o Bem   </h2>
         </div>
       </div>
-      <div class="box">
-        <div class="content">
-          <h3 class="title">Novos Projetos</h3>
-          <p class="subtitle">Você já tentou colocar um projeto para funcionar?</p><a href="">Saiba mais</a>
+      <div class="container">
+        <div class="items">
+          <div data-tab="1" class="item">     <img src="assets/images/icons/1.png" alt="">
+            <h4>DIVULGUE</h4><span>as ações da sua ONG na rede</span>
+          </div>
+          <div data-tab="2" class="item">     <img src="assets/images/icons/2.png" alt="">
+            <h4>CONVOQUE</h4><span>voluntários com a nossa ajuda</span>
+          </div>
+          <div data-tab="3" class="item">     <img src="assets/images/icons/3.png" alt="">
+            <h4>ESPALHE</h4><span>as boas iniciativas pela rede</span>
+          </div>
+          <div data-tab="4" class="item">     <img src="assets/images/icons/4.png" alt="">
+            <h4>APOIE</h4><span>uma causa participando da rede</span>
+          </div>
         </div>
       </div>
-      <div class="box">
-        <div class="content">
-          <h3 class="title">Parceiro Institucional</h3>
-          <p class="subtitle">A mais um quer modificar a forma de investimento do setor privado no terceiro setor.</p><a href="">Saiba mais</a>
-        </div>
-      </div>
-      <div class="box">
-        <div class="content">
-          <h3 class="title">Parceiro Social</h3>
-          <p class="subtitle">Nós sabemos que a maior dificuldade do terceiro setor é planejar e arrecadar.</p><a href="">Saiba mais</a>
+      <div class="item-info">
+        <div class="container">
+          <div data-tab-index="1" class="contents">
+            <h2>Divulgue as ações de sua ONG na rede</h2>
+            <p>Sua ONG tem um projeto inspirador e gostaria de mais apoio? Patrocínio? Doações? Voluntariado?</p>
+            <p>Explique, mostre fotos, vídeo, divulgue o seu projeto ou a ONG que você apoia para a rede Mais Um, queremos ajudar a espalhar as ações do bem. Nosso objetivo é incentivar e fomentar ajuda a todos que precisam.</p>
+            <p>Sinta-se a vontade para cadastrar seu projeto, use o formulário abaixo , para ajudarmos a divulgá-lo.</p>
+            <form action="/register/share" method="POST" accept-charset="utf8" class="tabform">
+              <div class="columns">
+                <div class="column">
+                  <div class="input-addon"><i class="fa fa-user"></i>
+                    <input type="text" name="name" placeholder="Nome Completo" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-envelope-o"></i>
+                    <input type="email" name="email" placeholder="E-Mail" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-phone"></i>
+                    <input type="text" name="phone" placeholder="Telefone" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-quote-left"></i>
+                    <input type="text" name="title" placeholder="Título da Campanha" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-calendar"></i>
+                    <input type="text" name="date" placeholder="Data da Ação" maxlength="10">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-file-image-o"></i>
+                    <input type="file" name="file">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-pencil"></i>
+                    <textarea name="description" placeholder="Descreva a Ação" rows="8"></textarea>
+                  </div>
+                </div>
+                <div class="column">
+                  <fieldset>
+                    <legend>
+                      <h4><i class="fa fa-key"></i>Escolha a causa de seu interesse:<small>* Multipla escolha</small></h4>
+                    </legend>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-1">
+                      <label for="share-1">Proteção Animal</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-2">
+                      <label for="share-2">Meio Ambiente</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-3">
+                      <label for="share-3">Saúde</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-4">
+                      <label for="share-4">Portadores de Necessidades Especiais</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-5">
+                      <label for="share-5">Voluntário</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-6">
+                      <label for="share-6">Programa Social</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-7">
+                      <label for="share-7">Educacional | Profissionalizante</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-8">
+                      <label for="share-8">Outros</label>
+                      <input type="text" name="others" placeholder="Quais outros?" style="padding-left: 10px" class="hidden">
+                    </div>
+                  </fieldset>
+                  <h4><i class="fa fa-share-alt"></i>Redes Sociais da Instituição ou Campanha</h4>
+                  <div class="input-addon"><i class="fa fa-facebook"></i>
+                    <input type="text" name="facebook" placeholder="Facebook" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-instagram"></i>
+                    <input type="text" name="instagram" placeholder="Instagram" class="required">
+                  </div>
+                </div>
+              </div>
+              <div class="row text-center">
+                <button type="submit">Enviar Cadastro</button>
+                <div class="response">
+                  <h2></h2><span></span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div data-tab-index="2" class="contents">
+            <h2>Convoque voluntários com a nossa ajuda</h2>
+            <p>A Mais Um quer aproximar as pessoas dispostas a praticar o bem dos projetos inspiradores.</p>
+            <p>Seu projeto precisa daquela forcinha, aquele  camarada forte para carregar as caixas, ou um ombro amigo para aquela pessoa frágil? Divulgue seu projeto e o que precisa, queremos encontrar pessoas dispostas a ajudar.</p>
+            <p>Cadastre sua <strong>ONG</strong> no formulário abaixo e descreva o que precisa.</p>
+            <form action="/register/invite" method="POST" accept-charset="utf8" class="tabform">
+              <div class="columns">
+                <div class="column">
+                  <div class="input-addon"><i class="fa fa-user"></i>
+                    <input type="text" name="name" placeholder="Nome Completo" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-envelope-o"></i>
+                    <input type="email" name="email" placeholder="E-Mail" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-phone"></i>
+                    <input type="text" name="phone" placeholder="Telefone" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-home"></i>
+                    <input type="text" name="entity" placeholder="Entidade" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-map-marker"></i>
+                    <input type="text" name="address" placeholder="Endereço Completo" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-pencil"></i>
+                    <textarea name="description" placeholder="Descreva sua necessidade" rows="10"></textarea>
+                  </div>
+                </div>
+                <div class="column">
+                  <fieldset>
+                    <legend>
+                      <h4><i class="fa fa-key"></i>Escolha a causa de seu interesse:<small>* Multipla escolha</small></h4>
+                    </legend>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-1">
+                      <label for="share-1">Proteção Animal</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-2">
+                      <label for="share-2">Meio Ambiente</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-3">
+                      <label for="share-3">Saúde</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-4">
+                      <label for="share-4">Portadores de Necessidades Especiais</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-5">
+                      <label for="share-5">Voluntário</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-6">
+                      <label for="share-6">Programa Social</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-7">
+                      <label for="share-7">Educacional | Profissionalizante</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-8">
+                      <label for="share-8">Outros</label>
+                      <input type="text" name="others" placeholder="Quais outros?" style="padding-left: 10px" class="hidden">
+                    </div>
+                  </fieldset>
+                  <h4><i class="fa fa-share-alt"></i>Redes Sociais da Instituição</h4>
+                  <div class="input-addon"><i class="fa fa-facebook"></i>
+                    <input type="text" name="facebook" placeholder="Facebook" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-instagram"></i>
+                    <input type="text" name="instagram" placeholder="Instagram" class="required">
+                  </div>
+                </div>
+              </div>
+              <div class="row text-center">
+                <button type="submit">Enviar Cadastro</button>
+                <div class="response">
+                  <h2></h2><span></span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div data-tab-index="3" class="contents">
+            <h2>Espalhe as boas iniciativas pela rede</h2>
+            <p>Uma das formas mais simples de ajudar uma ação do bem é espalhar a ideia! Você pode divulgar todas as ações ligadas à causa que você mais se identifica. </p>
+            <p>Ficou sabendo de uma ação do bem e quer espalhar?</p>
+            <p>Cadastre-se e faça parte da maior rede colaborativa do país.</p>
+            <form action="/register/spread" method="POST" accept-charset="utf8" class="tabform">
+              <div class="columns">
+                <div class="column">
+                  <div class="input-addon"><i class="fa fa-user"></i>
+                    <input type="text" name="name" placeholder="Nome Completo" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-envelope-o"></i>
+                    <input type="email" name="email" placeholder="E-Mail" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-phone"></i>
+                    <input type="text" name="phone" placeholder="Telefone" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-info"></i>
+                    <input type="text" name="document" placeholder="CPF" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-map-marker"></i>
+                    <input type="text" name="address" placeholder="Endereço Completo" class="required">
+                  </div>
+                  <fieldset style="margin-top:20px">
+                    <legend>
+                      <h4><i class="fa fa-support"></i>Como gostaria de ajudar?</h4>
+                    </legend>
+                    <div class="input-group">
+                      <input type="checkbox" name="support[]" value="1" id="support-1">
+                      <label for="support-1">Doação</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="support[]" value="2" id="support-1">
+                      <label for="support-1">Voluntariado</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="column">
+                  <fieldset>
+                    <legend>
+                      <h4><i class="fa fa-key"></i>Escolha a causa de seu interesse:<small>* Multipla escolha</small></h4>
+                    </legend>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-1">
+                      <label for="share-1">Proteção Animal</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-2">
+                      <label for="share-2">Meio Ambiente</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-3">
+                      <label for="share-3">Saúde</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-4">
+                      <label for="share-4">Portadores de Necessidades Especiais</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-5">
+                      <label for="share-5">Voluntário</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-6">
+                      <label for="share-6">Programa Social</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-7">
+                      <label for="share-7">Educacional | Profissionalizante</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="checkbox" name="intrest[]" value="1" id="share-8">
+                      <label for="share-8">Outros</label>
+                      <input type="text" name="others" placeholder="Quais outros?" style="padding-left: 10px" class="hidden">
+                    </div>
+                  </fieldset>
+                  <h4><i class="fa fa-share-alt"></i>Redes Sociais da Instituição ou Campanha</h4>
+                  <div class="input-addon"><i class="fa fa-facebook"></i>
+                    <input type="text" name="facebook" placeholder="Facebook" class="required">
+                  </div>
+                  <div class="input-addon"><i class="fa fa-instagram"></i>
+                    <input type="text" name="instagram" placeholder="Instagram" class="required">
+                  </div>
+                </div>
+              </div>
+              <div class="row text-center">
+                <button type="submit">Enviar Cadastro</button>
+                <div class="response">
+                  <h2></h2><span></span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div data-tab-index="4" class="contents">
+            <h2>Apoie uma causa participando da rede</h2>
+            <p>O maior benefício que a Mais Um pode proporcionar é a participar de uma grande experiência de vida. Queremos somar/unir pessoas e istituições para espalhar ações do bem e mudar o mundo!</p>
+            <p>Se você adora ajudar, busca fazer o bem e quer melhorar o mundo, venha fazer parte da maior rede colaborativa do Brasil.</p>
+            <div class="social-feed">
+              <div class="facebook-feed">
+                <div data-height="530" data-href="https://www.facebook.com/redemaisum/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" class="fb-page"></div>
+                <div class="fb-xfbml-parse-ignore">
+                  <blockquote cite="https://www.facebook.com/redemaisum/"><a href="https://www.facebook.com/redemaisum/"></a></blockquote>
+                </div>
+              </div>
+              <div class="twitter-feed"><a href="https://twitter.com/redemais1" data-widget-id="730814507614908416" class="twitter-timeline">Tweets de @redemais1</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section data-scroll-index="2" class="donation-feed">
+    <section data-scroll-index="3" data-tab-set="2" class="tabbed">
+      <div class="header">
+        <div class="container">
+          <h2 class="title">Interaja +</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="items">
+          <div data-tab="1" class="item">     <img src="assets/images/icons/4.png" alt="">
+            <h4>EMPRESAS</h4>
+          </div>
+          <div data-tab="2" class="item">     <img src="assets/images/icons/4.png" alt="">
+            <h4>SOCIAL</h4>
+          </div>
+          <div data-tab="3" class="item">     <img src="assets/images/icons/4.png" alt="">
+            <h4>EMBAIXADORES</h4>
+          </div>
+        </div>
+      </div>
+      <div class="item-info">
+        <div class="container">
+          <div data-tab-index="1" class="contents">
+            <h2>Divulgue as ações de sua ONG na rede</h2>
+            <p>Sua ONG tem um projeto inspirador e gostaria de mais apoio? Patrocínio? Doações? Voluntariado?</p>
+            <p>Explique, mostre fotos, vídeo, divulgue o seu projeto ou a ONG que você apoia para a rede Mais Um, queremos ajudar a espalhar as ações do bem. Nosso objetivo é incentivar e fomentar ajuda a todos que precisam.</p>
+            <p>Sinta-se a vontade para cadastrar seu projeto, use o formulário abaixo , para ajudarmos a divulgá-lo.</p>
+          </div>
+          <div data-tab-index="2" class="contents">
+            <h2>Convoque voluntários com a nossa ajuda</h2>
+            <p>A Mais Um quer aproximar as pessoas dispostas a praticar o bem dos projetos inspiradores.</p>
+            <p>Seu projeto precisa daquela forcinha, aquele  camarada forte para carregar as caixas, ou um ombro amigo para aquela pessoa frágil? Divulgue seu projeto e o que precisa, queremos encontrar pessoas dispostas a ajudar.</p>
+            <p>Cadastre sua <strong>ONG</strong> no formulário abaixo e descreva o que precisa.</p>
+          </div>
+          <div data-tab-index="3" class="contents">
+            <h2>Convoque voluntários com a nossa ajuda</h2>
+            <p>A Mais Um quer aproximar as pessoas dispostas a praticar o bem dos projetos inspiradores.</p>
+            <p>Seu projeto precisa daquela forcinha, aquele  camarada forte para carregar as caixas, ou um ombro amigo para aquela pessoa frágil? Divulgue seu projeto e o que precisa, queremos encontrar pessoas dispostas a ajudar.</p>
+            <p>Cadastre sua <strong>ONG</strong> no formulário abaixo e descreva o que precisa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-scroll-index="4" class="donation-feed">
       <div class="container">
         <div class="info-left">
           <h3>causa <br> mais <br><strong>Urgente</strong></h3>
@@ -125,7 +430,7 @@
         </div>
       </div>
     </section>
-    <section data-scroll-index="3" class="recent">
+    <section data-scroll-index="4" class="recent">
       <div class="container">
         <h2 class="title"> <strong>Causas </strong>Recentes</h2>
         <div class="causes">
@@ -180,36 +485,6 @@
         </div>
       </div>
     </section>
-    <section class="about">
-      <div class="container">
-        <div class="title"><img src="assets/images/logo/default.png" alt="Mais Um"></div>
-        <div class="content">
-          <div class="item">
-            <h4 class="title"><strong>O que </strong>fazemos</h4>
-            <ul>
-              <li>
-                <p>é provocar a aproximação entre doadores e organizações incentivando a transformação social.</p>
-              </li>
-              <li>
-                <p>encurtar o caminho das doações, com motivação e incentivo para que elas aconteçam</p>
-              </li>
-              <li>
-                <p>criar uma ponte entre INSTITUIÇÕES  e PESSOAS predispostas a ajudar</p>
-              </li>
-            </ul>
-          </div>
-          <div class="item">
-            <h4 class="title"><strong>Por que </strong>ser mais um ?</h4>
-            <p class="big">Aqui você faz parte de um grupo de pessoas que estão realmente interessados em fazer a diferença.</p>
-          </div>
-          <div class="item">
-            <figure class="join-us">
-              <h4 class="handwriting">#sejamaisum</h4><a class="cta">Junte-se a nós</a>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="about-stats">
       <div class="container">
         <div class="stats"><i class="fa fa-heart"></i><span>12345</span><small>causas</small></div>
@@ -218,7 +493,7 @@
         <div class="stats"><i class="fa fa-users"></i><span>12345</span><small>pessoas ajudadas</small></div>
       </div>
     </section>
-    <section data-scroll-index="5" class="partners">
+    <section data-scroll-index="5" class="partners light">
       <div class="container">
         <div class="partners-carousel">
           <div class="partner"><img src="assets/images/content/partners/01.png" alt="Agência dZoë"/></div>
@@ -234,18 +509,12 @@
         </div>
       </div>
     </section>
-    <section class="ambassador">
-      <div class="container">
-        <div class="world"></div>
-        <div class="text"><span>vocÊ quer fazer parte da estrutura da <strong>mais um</strong>?</span><span><strong>então seja um embaixador mais um!</strong></span><a href="#">saiba mais</a></div>
-      </div>
-    </section>
-    <section data-scroll-index="6" class="contact">
+    <section class="contact">
       <div class="container">
         <h2 class="title"> <strong>Entre </strong>em contato</h2>
         <div class="info-box">
           <div class="info"><i class="fa fa-phone"></i><span class="text-center">(43) 1234.5678</span></div>
-          <div class="info"><i class="fa fa-envelope-o"></i><span><strong>Dúvidas:</strong>            maisum@redemais1.com.br</span><span><strong>Marketing:</strong>          mkt@redemais1.com.br</span><span><strong>Imprensa:</strong>           imprensa@redemais1.com.br</span><span><strong>Embaixadores:</strong>       embaixadores@redemais1.com.br</span><span><strong>Parceria:</strong>           mkt@redemais1.com.br</span><span><strong>Problemas Técnicos:</strong> suporte@redemais1.com.br</span><span><strong>Fundador:</strong>           ceo@redemais1.com.br</span></div>
+          <div class="info"><i class="fa fa-envelope-o"></i><span class="text-center">contato@maisum.social</span></div>
         </div>
         <form action="" class="contact">
           <div class="content">
@@ -281,11 +550,12 @@
       </div>
       <div class="copyright">
         <div class="container">
-          <p>&copy; mais um - Todos os direitos reservados - 2015</p><a href="http://www.agenciadzoe.com.br" class="developer"><img src="http://www.agenciadzoe.com.br/assets/public/images/logo.png" alt="Agência dZoë" height="30"/></a>
+          <p>&copy; MaisUm - Todos os direitos reservados - 2016</p><a href="http://www.agenciadzoe.com.br" class="developer"><img src="http://www.agenciadzoe.com.br/assets/public/images/logo.png" alt="Agência dZoë" height="30"/></a>
         </div>
       </div>
     </footer>
     <div class="scroll-top"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
+    <div class="fb-root">           </div>
     <script type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="assets/scripts/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="assets/scripts/owl.carousel.min.js"></script>

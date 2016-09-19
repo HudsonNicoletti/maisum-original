@@ -1,0 +1,348 @@
+section.tabbed
+  padding: 0
+
+  .header
+    width: 100%
+    background-color: $_primary-green
+
+    &.fixed
+      z-index: 3
+      position: fixed
+      top: 55px
+
+      @media( max-width: 960px )
+        top: 92px
+
+    .container
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+
+      .title
+        color: $_primary_white
+        font:
+          size: 30px
+
+  .container
+    .items
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-direction: row
+      flex-wrap: wrap
+      margin: 50px 0
+
+      .item
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 8px
+        text-align: center
+
+        h4
+          font-weight: bold
+
+        img
+          transition: all 0.3s
+
+        &:hover
+          cursor: pointer
+
+          img
+            animation-name: tada
+            animation-duration: 0.8s
+
+      @media( max-width: 640px )
+        justify-content: center
+
+  .item-info
+    background-color: #e6e6e6
+    width: 100%
+    height: auto
+    overflow: hidden
+
+    .contents
+      display: none
+      align-items: flex-start
+      justify-content: center
+      flex-direction: column
+      height: 0px
+      transition: all 0.15s linear
+      opacity: 0
+
+      &.active
+        padding: 15px
+        display: flex
+        height: auto
+        opacity: 1
+
+        p
+          text-align: justify
+          color: $_primary-black
+          font:
+            size: 20px
+
+          &:first-child
+            padding-top: 15px
+          &:last-child
+            padding-bottom: 15px
+          strong , a
+            color: $_primary_green
+            font-weight: bold
+
+      form
+        width: 100%
+
+        .response
+          opacity: 0
+          display: none
+          align-items: center
+          justify-content: center
+          flex-direction: column
+          text-align: center
+          padding: 15px
+          transition: all 0.15s
+          color: $_primary-white
+          width: 100%
+
+          &.success
+            opacity: 1
+            display: flex
+            background-color: $_primary_green
+            border-radius: 50px 0 50px 0
+          &.error
+            opacity: 1
+            display: flex
+            background-color: $_primary_red
+            border-radius: 50px 0 50px 0
+
+      .columns
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+
+        @media( max-width: 960px )
+          flex-direction: column
+
+        .column
+          width: 100%
+          display: flex
+          align-items: flex-start
+          justify-content: flex-start
+          flex-direction: column
+          padding: 6px 15px
+
+        .input-addon
+          position: relative
+          width: 100%
+          padding: 5px 0px
+
+          i
+            position: absolute
+            padding: 10px
+            font:
+              size: 26px
+
+          input
+            height: 40px
+
+          textarea
+            min-height: 142px
+            resize: none
+
+          input,textarea
+            width: 100%
+            padding-left: 50px
+            font-size: 20px
+            transition: all 0.15s
+
+            &.error
+              border: 1px solid $_primary-red
+
+        input
+          width: 100%
+          padding: 6px 0px
+          font:
+            size: 18px
+            family: Open Sans
+          text-align: left
+
+          &.error
+            border: 2px solid $_primary_red
+
+          &[type='file']
+            background-color: $_primary-white
+            border: solid 1px #CCC
+
+        fieldset
+          width: 100%
+          .input-group
+            padding: 3px 0
+            width: 100%
+
+        [type="checkbox"]:not(:checked), [type="checkbox"]:checked
+          position: absolute
+          left: -9999px
+
+        [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label
+          position: relative
+          padding: 6px 35px
+          cursor: pointer
+          font-weight: 300
+
+        /* checkbox aspect */
+        [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 2px
+          width: 26px
+          height: 26px
+          border: 1px solid #aaa
+          background: #f8f8f8
+          border-radius: 0px
+
+        /* checked mark aspect */
+        [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after
+          content: '\f00c'
+          font-family: 'FontAwesome'
+          position: absolute
+          top: 3px
+          left: 4px
+          font-size: 26px
+          line-height: 0.8
+          color: $_primary-green
+          transition: all .2s
+
+        /* checked mark aspect changes */
+        [type="checkbox"]:not(:checked) + label:after
+          opacity: 0
+          transform: scale(0)
+
+        [type="checkbox"]:checked + label:after
+          opacity: 1
+          transform: scale(1)
+
+        /* disabled checkbox */
+        [type="checkbox"]:disabled:not(:checked) + label:before, [type="checkbox"]:disabled:checked + label:before
+          box-shadow: none
+          border-color: #bbb
+          background-color: #ddd
+
+        [type="checkbox"]:disabled:checked + label:after
+          color: #999
+
+        [type="checkbox"]:disabled + label
+          color: #aaa
+
+    button
+      display: inline-block
+      background: rgba( $_primary-black , 0 )
+      border: solid 1px $_primary-black
+      color: $_primary-black
+      padding: 10px 30px
+      letter-spacing: 0.25em
+      text-transform: uppercase
+      transition: all 0.15s linear 0s
+      margin: 30px 0
+
+      &:hover
+        background: rgba( $_primary-black , 1 )
+        color: $_primary-white
+
+  .social-feed
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: row
+
+    @media( max-width: 960px )
+      flex-direction: column
+
+    .instagram-feed , .facebook-feed , .twitter-feed
+      width: calc(100% - 10px)
+      margin: 10px
+
+    .instagram-feed
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+
+      .header
+        width: 100%
+        background: #125688
+        text-align: center
+        margin: 0
+        padding: 0
+        h3
+          color: #FFFFFF
+          text-transform: uppercase
+          padding: 15px 20px
+          font:
+            size: 22px
+            weight: bold
+          display: inline-block
+          margin: 0
+
+      .bio
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        background: #FAFAFA
+        margin: 0
+        padding: 0
+
+        .left , .right
+          padding: 8px 15px
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-direction: column
+
+        .right
+          align-items: flex-start
+          .text
+            height: 180px
+
+        .left
+          img
+            width: 100px
+            height: 100px
+            border:
+              radius: 100%
+          h4
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            font-weight: bold
+            span
+              display: inline-block
+              margin: 0
+              padding: 4px 0
+              color: #ACACAC
+              font:
+                size: 14px
+                weight: 400
+              text-transform: uppercase
+
+      .photos
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        flex-wrap: wrap
+        background: #FFFFFF
+
+        img
+          width: calc(33.3% - 4px)
+          margin: 2px
