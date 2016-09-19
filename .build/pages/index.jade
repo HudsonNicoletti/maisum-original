@@ -16,29 +16,14 @@ html
     body.home
                  
         header(data-scroll-index="1")
-            .info-section
-                ul
-                    li
-                        i.fa.fa-map-marker  
-                        | 4321 YOUR ADDRESS, COUNTRY
-                    li
-                        i.fa.fa-phone
-                        |  8 (800) 695-2684
-                    li
-                        i.fa.fa-envelope-o
-                        | SUPPORT@MERCYHEART.COM
-                        
-                form.search(action="")
-                    input(type="text",placeholder="Pesquisar ...")
-                    button(type="submit"): i.fa.fa-search
-                    
             .main-section
                 .logo
                 .social
-                    a(href="#"): i.fa.fa-facebook
-                    a(href="#"): i.fa.fa-twitter
-                    a(href="#"): i.fa.fa-youtube-play
-                    a(href="#"): i.fa.fa-google
+                    a(href="/blog"): i.fa.fa-newspaper-o
+                    a(href="https://www.facebook.com/redemaisum/"): i.fa.fa-facebook
+                    a(href="https://twitter.com/redemais1"): i.fa.fa-twitter
+                    a(href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"): i.fa.fa-youtube-play
+                    a(href="https://www.instagram.com/redemaisum/"): i.fa.fa-instagram
             nav
                 .menu-logo
                 .menu-toggle
@@ -46,16 +31,13 @@ html
                     span.bar
                     span.bar
                 ul
-                    li(data-scroll-nav="1"): a(href="#") Home
-                    li(data-scroll-nav="2"): a(href="#") Interaja + 
-                    li(data-scroll-nav="3"): a(href="#") Crie Experiências
-                    li(data-scroll-nav="4"): a(href="#") Senso de Urgência
-                    li(data-scroll-nav="5"): a(href="#") sobre
-                    li(data-scroll-nav="5"): a(href="#") embaixadores
+                    li(data-scroll-nav="2"): a(href="#") Faça o Bem
+                    li(data-scroll-nav="3"): a(href="#") Interaja + 
+                    li(data-scroll-nav="4"): a(href="#") Causas
+                    li(): a(href="#") Sobre
                     li(data-scroll-nav="5"): a(href="#") Parceiros
-                    li(data-scroll-nav="6"): a(href="#") Contato
                     
-        section.slider
+        section.slider(data-scroll-index="1")
              ul.slides-container
                  li(style="background-image: url('assets/images/slider/01.jpg')")
                     .container
@@ -73,29 +55,327 @@ html
                         h2.big A <strong> ENTIDADE X </strong> PRECISA DA SUA <b>AJUDA</b>
                         a.cta(href="#") Colabore
                  
-        section.slider-cta
-          .box
-            .content
-              h3.title Você
-              p.subtitle Dentro da mais um, vocÊ pode escolher a melhor forma de ajudar.
-              a(href="") saiba mais
-          .box
-            .content
-              h3.title Novos Projetos
-              p.subtitle Você já tentou colocar um projeto para funcionar?
-              a(href="") Saiba mais
-          .box
-            .content
-              h3.title Parceiro Institucional
-              p.subtitle A mais um quer modificar a forma de investimento do setor privado no terceiro setor.
-              a(href="") Saiba mais
-          .box
-            .content
-              h3.title Parceiro Social
-              p.subtitle Nós sabemos que a maior dificuldade do terceiro setor é planejar e arrecadar.
-              a(href="") Saiba mais
+        section.tabbed(data-scroll-index="2",data-tab-set="1")
+          .header
+            .container
+              h2.title Faça o Bem   
+          .container
+            .items
+              .item(data-tab="1")      
+                img(src="assets/images/icons/1.png", alt="")
+                h4 DIVULGUE
+                span as ações da sua ONG na rede
+              .item(data-tab="2")      
+                img(src="assets/images/icons/2.png", alt="")
+                h4 CONVOQUE
+                span voluntários com a nossa ajuda
+              .item(data-tab="3")      
+                img(src="assets/images/icons/3.png", alt="")
+                h4 ESPALHE
+                span as boas iniciativas pela rede
+              .item(data-tab="4")      
+                img(src="assets/images/icons/4.png", alt="")
+                h4 APOIE
+                span uma causa participando da rede
+                
+          .item-info
+            .container
+              .contents(data-tab-index="1")
+                h2 Divulgue as ações de sua ONG na rede
+                p Sua ONG tem um projeto inspirador e gostaria de mais apoio? Patrocínio? Doações? Voluntariado?
+                p Explique, mostre fotos, vídeo, divulgue o seu projeto ou a ONG que você apoia para a rede Mais Um, queremos ajudar a espalhar as ações do bem. Nosso objetivo é incentivar e fomentar ajuda a todos que precisam.
+                p Sinta-se a vontade para cadastrar seu projeto, use o formulário abaixo , para ajudarmos a divulgá-lo.
+                
+                form.tabform(action="/register/share",method="POST",accept-charset="utf8")
+                  .columns
+                    .column
+                      .input-addon
+                        i.fa.fa-user
+                        input.required(type="text",name="name",placeholder="Nome Completo")
+                      .input-addon
+                        i.fa.fa-envelope-o
+                        input.required(type="email",name="email",placeholder="E-Mail")
+                      .input-addon
+                        i.fa.fa-phone
+                        input.required(type="text",name="phone",placeholder="Telefone")
+                      .input-addon
+                        i.fa.fa-quote-left
+                        input.required(type="text",name="title",placeholder="Título da Campanha")
+                      .input-addon
+                        i.fa.fa-calendar
+                        input(type="text",name="date",placeholder="Data da Ação",maxlength="10")
+                      .input-addon
+                        i.fa.fa-file-image-o
+                        input(type="file",name="file")
+                      .input-addon
+                        i.fa.fa-pencil
+                        textarea(name="description",placeholder="Descreva a Ação",rows="8")
                     
-        section.donation-feed(data-scroll-index="2")
+                    .column
+                      fieldset
+                        legend
+                          h4
+                            i.fa.fa-key
+                            | Escolha a causa de seu interesse:
+                            small * Multipla escolha
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-1")
+                          label(for="share-1") Proteção Animal
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-2")
+                          label(for="share-2") Meio Ambiente
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-3")
+                          label(for="share-3") Saúde
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-4")
+                          label(for="share-4") Portadores de Necessidades Especiais
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-5")
+                          label(for="share-5") Voluntário
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-6")
+                          label(for="share-6") Programa Social
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-7")
+                          label(for="share-7") Educacional | Profissionalizante
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-8")
+                          label(for="share-8") Outros
+                          input(type="text",name="others",placeholder="Quais outros?",class="hidden",style="padding-left: 10px")
+  
+                      h4
+                        i.fa.fa-share-alt
+                        | Redes Sociais da Instituição ou Campanha
+                        
+                      .input-addon
+                        i.fa.fa-facebook
+                        input.required(type="text",name="facebook",placeholder="Facebook")
+                      .input-addon
+                        i.fa.fa-instagram
+                        input.required(type="text",name="instagram",placeholder="Instagram")
+                        
+                  .row.text-center
+                    button(type="submit") Enviar Cadastro
+                    .response
+                      h2
+                      span
+              
+              .contents(data-tab-index="2")
+                h2 Convoque voluntários com a nossa ajuda
+                p A Mais Um quer aproximar as pessoas dispostas a praticar o bem dos projetos inspiradores.
+                p Seu projeto precisa daquela forcinha, aquele  camarada forte para carregar as caixas, ou um ombro amigo para aquela pessoa frágil? Divulgue seu projeto e o que precisa, queremos encontrar pessoas dispostas a ajudar.
+                p Cadastre sua <strong>ONG</strong> no formulário abaixo e descreva o que precisa.
+                
+                form.tabform(action="/register/invite",method="POST",accept-charset="utf8")
+                  .columns
+                    .column
+                      .input-addon
+                        i.fa.fa-user
+                        input.required(type="text",name="name",placeholder="Nome Completo")
+                      .input-addon
+                        i.fa.fa-envelope-o
+                        input.required(type="email",name="email",placeholder="E-Mail")
+                      .input-addon
+                        i.fa.fa-phone
+                        input.required(type="text",name="phone",placeholder="Telefone")
+                      .input-addon
+                        i.fa.fa-home
+                        input.required(type="text",name="entity",placeholder="Entidade")
+                      .input-addon
+                        i.fa.fa-map-marker
+                        input.required(type="text",name="address",placeholder="Endereço Completo")
+                      .input-addon
+                        i.fa.fa-pencil
+                        textarea(name="description",placeholder="Descreva sua necessidade",rows="10")
+                    
+                    .column
+                      fieldset
+                        legend
+                          h4
+                            i.fa.fa-key
+                            | Escolha a causa de seu interesse:
+                            small * Multipla escolha
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-1")
+                          label(for="share-1") Proteção Animal
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-2")
+                          label(for="share-2") Meio Ambiente
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-3")
+                          label(for="share-3") Saúde
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-4")
+                          label(for="share-4") Portadores de Necessidades Especiais
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-5")
+                          label(for="share-5") Voluntário
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-6")
+                          label(for="share-6") Programa Social
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-7")
+                          label(for="share-7") Educacional | Profissionalizante
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-8")
+                          label(for="share-8") Outros
+                          input(type="text",name="others",placeholder="Quais outros?",class="hidden",style="padding-left: 10px")
+  
+                      h4
+                        i.fa.fa-share-alt
+                        | Redes Sociais da Instituição
+                        
+                      .input-addon
+                        i.fa.fa-facebook
+                        input.required(type="text",name="facebook",placeholder="Facebook")
+                      .input-addon
+                        i.fa.fa-instagram
+                        input.required(type="text",name="instagram",placeholder="Instagram")
+                        
+                  .row.text-center
+                    button(type="submit") Enviar Cadastro
+                    .response
+                      h2
+                      span
+                
+              .contents(data-tab-index="3")
+                h2 Espalhe as boas iniciativas pela rede
+                p Uma das formas mais simples de ajudar uma ação do bem é espalhar a ideia! Você pode divulgar todas as ações ligadas à causa que você mais se identifica. 
+                p Ficou sabendo de uma ação do bem e quer espalhar?
+                p Cadastre-se e faça parte da maior rede colaborativa do país.
+                form.tabform(action="/register/spread",method="POST",accept-charset="utf8")
+                  .columns
+                    .column
+                      .input-addon
+                        i.fa.fa-user
+                        input.required(type="text",name="name",placeholder="Nome Completo")
+                      .input-addon
+                        i.fa.fa-envelope-o
+                        input.required(type="email",name="email",placeholder="E-Mail")
+                      .input-addon
+                        i.fa.fa-phone
+                        input.required(type="text",name="phone",placeholder="Telefone")
+                      .input-addon
+                        i.fa.fa-info
+                        input.required(type="text",name="document",placeholder="CPF")
+                      .input-addon
+                        i.fa.fa-map-marker
+                        input.required(type="text",name="address",placeholder="Endereço Completo")
+                      fieldset(style="margin-top:20px")
+                        legend
+                          h4
+                            i.fa.fa-support
+                            | Como gostaria de ajudar?
+                            
+                        .input-group
+                          input(type="checkbox",name="support[]",value="1",id="support-1")
+                          label(for="support-1") Doação
+                        .input-group
+                          input(type="checkbox",name="support[]",value="2",id="support-1")
+                          label(for="support-1") Voluntariado
+                    
+                    .column
+                      fieldset
+                        legend
+                          h4
+                            i.fa.fa-key
+                            | Escolha a causa de seu interesse:
+                            small * Multipla escolha
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-1")
+                          label(for="share-1") Proteção Animal
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-2")
+                          label(for="share-2") Meio Ambiente
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-3")
+                          label(for="share-3") Saúde
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-4")
+                          label(for="share-4") Portadores de Necessidades Especiais
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-5")
+                          label(for="share-5") Voluntário
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-6")
+                          label(for="share-6") Programa Social
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-7")
+                          label(for="share-7") Educacional | Profissionalizante
+                        .input-group
+                          input(type="checkbox",name="intrest[]",value="1",id="share-8")
+                          label(for="share-8") Outros
+                          input(type="text",name="others",placeholder="Quais outros?",class="hidden",style="padding-left: 10px")
+  
+                      h4
+                        i.fa.fa-share-alt
+                        | Redes Sociais da Instituição ou Campanha
+                        
+                      .input-addon
+                        i.fa.fa-facebook
+                        input.required(type="text",name="facebook",placeholder="Facebook")
+                      .input-addon
+                        i.fa.fa-instagram
+                        input.required(type="text",name="instagram",placeholder="Instagram")
+                        
+                  .row.text-center
+                    button(type="submit") Enviar Cadastro
+                    .response
+                      h2
+                      span
+                
+              .contents(data-tab-index="4")
+                h2 Apoie uma causa participando da rede
+                p O maior benefício que a Mais Um pode proporcionar é a participar de uma grande experiência de vida. Queremos somar/unir pessoas e istituições para espalhar ações do bem e mudar o mundo!
+                p Se você adora ajudar, busca fazer o bem e quer melhorar o mundo, venha fazer parte da maior rede colaborativa do Brasil.
+                
+                .social-feed
+                  .facebook-feed
+                    .fb-page(data-height="530"  ,data-href="https://www.facebook.com/redemaisum/" ,data-tabs="timeline" ,data-small-header="false" ,data-adapt-container-width="true" ,data-hide-cover="false" ,data-show-facepile="false")
+                    .fb-xfbml-parse-ignore
+                      blockquote(cite="https://www.facebook.com/redemaisum/")
+                        a(href="https://www.facebook.com/redemaisum/")
+                  .twitter-feed
+                    a.twitter-timeline(href="https://twitter.com/redemais1" ,data-widget-id="730814507614908416") Tweets de @redemais1
+                        
+        section.tabbed(data-scroll-index="3",data-tab-set="2")
+          .header
+            .container
+              h2.title Interaja +
+          .container
+            .items
+              .item(data-tab="1")      
+                img(src="assets/images/icons/4.png", alt="")
+                h4 EMPRESAS
+              .item(data-tab="2")      
+                img(src="assets/images/icons/4.png", alt="")
+                h4 SOCIAL
+              .item(data-tab="3")      
+                img(src="assets/images/icons/4.png", alt="")
+                h4 EMBAIXADORES
+                
+          .item-info
+            .container
+              .contents(data-tab-index="1")
+                h2 Divulgue as ações de sua ONG na rede
+                p Sua ONG tem um projeto inspirador e gostaria de mais apoio? Patrocínio? Doações? Voluntariado?
+                p Explique, mostre fotos, vídeo, divulgue o seu projeto ou a ONG que você apoia para a rede Mais Um, queremos ajudar a espalhar as ações do bem. Nosso objetivo é incentivar e fomentar ajuda a todos que precisam.
+                p Sinta-se a vontade para cadastrar seu projeto, use o formulário abaixo , para ajudarmos a divulgá-lo.
+              
+              .contents(data-tab-index="2")
+                h2 Convoque voluntários com a nossa ajuda
+                p A Mais Um quer aproximar as pessoas dispostas a praticar o bem dos projetos inspiradores.
+                p Seu projeto precisa daquela forcinha, aquele  camarada forte para carregar as caixas, ou um ombro amigo para aquela pessoa frágil? Divulgue seu projeto e o que precisa, queremos encontrar pessoas dispostas a ajudar.
+                p Cadastre sua <strong>ONG</strong> no formulário abaixo e descreva o que precisa.
+                
+              .contents(data-tab-index="3")
+                h2 Convoque voluntários com a nossa ajuda
+                p A Mais Um quer aproximar as pessoas dispostas a praticar o bem dos projetos inspiradores.
+                p Seu projeto precisa daquela forcinha, aquele  camarada forte para carregar as caixas, ou um ombro amigo para aquela pessoa frágil? Divulgue seu projeto e o que precisa, queremos encontrar pessoas dispostas a ajudar.
+                p Cadastre sua <strong>ONG</strong> no formulário abaixo e descreva o que precisa.
+                 
+        section.donation-feed(data-scroll-index="4")
             .container
                 .info-left
                     h3
@@ -125,7 +405,7 @@ html
                     +testimony()
                     +testimony()
                     
-        section.recent(data-scroll-index="3")
+        section.recent(data-scroll-index="4")
             .container
                 h2.title 
                     strong Causas 
@@ -137,31 +417,6 @@ html
                     +cause("assets/images/content/causes/03.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",80,80,"#")
                     +cause("assets/images/content/causes/02.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",50,60,"#")
                     +cause("assets/images/content/causes/01.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",75,90,"#")
-                    
-        section.about
-            .container
-                .title
-                    img(src="assets/images/logo/default.png", alt="Mais Um")
-                .content
-                    .item
-                        h4.title
-                            strong O que 
-                            | fazemos
-                        ul
-                            li: p é provocar a aproximação entre doadores e organizações incentivando a transformação social.
-                            li: p encurtar o caminho das doações, com motivação e incentivo para que elas aconteçam
-                            li: p criar uma ponte entre INSTITUIÇÕES  e PESSOAS predispostas a ajudar
-                            
-                    .item
-                        h4.title
-                            strong Por que 
-                            | ser mais um ?
-                        p.big Aqui você faz parte de um grupo de pessoas que estão realmente interessados em fazer a diferença.
-                        
-                    .item
-                        figure.join-us
-                            h4.handwriting #sejamaisum
-                            a.cta Junte-se a nós
                             
         section.about-stats
             .container
@@ -182,24 +437,12 @@ html
                     span 12345
                     small pessoas ajudadas
                             
-        section.partners(data-scroll-index="5")
+        section.partners.light(data-scroll-index="5")
             .container
                 .partners-carousel
                     +partners()
-        
-        section.ambassador
-            .container
-              .world
-              .text
-                span
-                  | vocÊ quer fazer parte da estrutura da 
-                  strong mais um
-                  | ?
-                span
-                  strong então seja um embaixador mais um!
-                a(href="#") saiba mais
                         
-        section.contact(data-scroll-index="6")
+        section.contact
             .container
                 h2.title 
                     strong Entre 
@@ -210,13 +453,7 @@ html
                         span.text-center (43) 1234.5678
                     .info
                         i.fa.fa-envelope-o
-                        span <strong>Dúvidas:</strong>            maisum@redemais1.com.br
-                        span <strong>Marketing:</strong>          mkt@redemais1.com.br
-                        span <strong>Imprensa:</strong>           imprensa@redemais1.com.br
-                        span <strong>Embaixadores:</strong>       embaixadores@redemais1.com.br
-                        span <strong>Parceria:</strong>           mkt@redemais1.com.br
-                        span <strong>Problemas Técnicos:</strong> suporte@redemais1.com.br
-                        span <strong>Fundador:</strong>           ceo@redemais1.com.br
+                        span.text-center contato@maisum.social
                         
                 form.contact(action="")
                     .content
@@ -242,7 +479,8 @@ html
         .scroll-top
             a(href="#")
                 i.fa.fa-chevron-up
-                    
+        
+        .fb-root            
         script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
         script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
         script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")

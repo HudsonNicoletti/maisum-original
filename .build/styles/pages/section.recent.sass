@@ -1,24 +1,22 @@
 section.recent
     padding: 15px
-    
+
     .container
         display: flex
         align-items: center
         justify-content: center
         flex-direction: column
         padding: 40px 0
-        border-bottom: 1px solid $_primary-green
-        
         @media( max-width: 960px )
             width: 100%
-            
+
         .causes
             width: 100%
             display: flex
             align-items: center
             justify-content: center
             flex-direction: row
-            
+
             .item
                 width: 100%
                 display: flex
@@ -26,7 +24,7 @@ section.recent
                 justify-content: center
                 flex-direction: column
                 padding: 15px
-                
+
                 figure
                     width: 100%
                     img
@@ -39,13 +37,13 @@ section.recent
                         size: 18px
                         family: Open Sans
                     text-align: center
-                    
+
                 .values
                     display: flex
                     align-items: center
                     justify-content: center
                     flex-direction: row
-                    
+
                     i.of
                         font:
                             size: 24px
@@ -53,13 +51,13 @@ section.recent
                             weight: 300
                         color: $_primary-greyD
                         padding: 20px 10px 0 10px
-                        
+
                     .data
                         display: flex
                         align-items: center
                         justify-content: center
                         flex-direction: column
-                        
+
                         small
                             text-transform: uppercase
                             padding: 0
@@ -68,14 +66,14 @@ section.recent
                                 size: 16px
                                 family: Open Sans
                                 weight: 400
-                        
+
                     span
                         font:
                             size: 50px
                             family: Open Sans
                             weight: 900
                         color: $_primary-green
-                        
+
                         &:before
                             content: "R$"
                             font:
@@ -83,8 +81,8 @@ section.recent
                                 family: Open Sans
                                 weight: 900
                             color: $_primary-greyD !important
-                        
-                        &.thousand                        
+
+                        &.thousand
                             &:after
                                 content: "k"
                                 font:
@@ -92,8 +90,8 @@ section.recent
                                     family: Open Sans
                                     weight: 900
                                     color: $_primary-greyD !important
-                        
-                        &.million                        
+
+                        &.million
                             &:after
                                 content: "kk"
                                 font:
@@ -101,8 +99,8 @@ section.recent
                                     family: Open Sans
                                     weight: 900
                                     color: $_primary-greyD !important
-                        
-                        &.billion                        
+
+                        &.billion
                             &:after
                                 content: "kkk"
                                 font:
@@ -110,7 +108,7 @@ section.recent
                                     family: Open Sans
                                     weight: 900
                                     color: $_primary-greyD !important
-                        
+
                 a
                     display: inline-block
                     background: rgba( $_primary-black , 0 )
