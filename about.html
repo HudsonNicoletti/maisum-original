@@ -11,31 +11,18 @@
   </head>
   <body class="about-us">
     <header data-scroll-index="1">
-      <div class="info-section">
-        <ul>
-          <li><i class="fa fa-map-marker"> </i>4321 YOUR ADDRESS, COUNTRY</li>
-          <li><i class="fa fa-phone"></i> 8 (800) 695-2684</li>
-          <li><i class="fa fa-envelope-o"></i>SUPPORT@MERCYHEART.COM</li>
-        </ul>
-        <form action="" class="search">
-          <input type="text" placeholder="Pesquisar ...">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
       <div class="main-section">
         <div class="logo"></div>
-        <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-youtube-play"></i></a><a href="#"><i class="fa fa-google"></i></a></div>
+        <div class="social"><a data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/redemaisum/"><i class="fa fa-facebook"></i></a><a data-toggle="tooltip" title="Twitter" href="https://twitter.com/redemais1"><i class="fa fa-twitter"></i></a><a data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"><i class="fa fa-youtube-play"></i></a><a data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/redemaisum/"><i class="fa fa-instagram"></i></a><a data-toggle="tooltip" title="Blog" href="/blog"><i class="fa fa-newspaper-o"></i></a></div>
       </div>
       <nav>
         <div class="menu-logo"></div>
-        <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+        <div class="menu-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Colabore</a></li>
-          <li><a href="/">Projetos</a></li>
-          <li><a href="/">Mais Um</a></li>
-          <li><a href="/">Parceiros</a></li>
-          <li><a href="/">Contato</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li data-scroll-nav="1"><a href="#">Sobre</a></li>
+          <li data-scroll-nav="2"><a href="#">Parceiros</a></li>
+          <li data-scroll-nav="3"><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
@@ -47,7 +34,7 @@
         </ul>
       </div>
     </section>
-    <section class="about-us">
+    <section data-scroll-index="1" class="about-us">
       <div class="container">
         <div class="content">
           <div class="half">
@@ -60,24 +47,24 @@
               <p>Criamos a rede, colocamos o site no ar e disponibilizamos um aplicativo para diminuir a distância entre a rede e o nosso colaborador.</p>
               <p>Esperamos você na nossa rede colaborativa e, <strong class="primary handwriting">#sejamaisum  </strong>mudando o mundo!!!!</p>
             </div>
-            <div class="tabs">
+            <div data-tab-set="1" class="tabs">
               <ul class="indexes">
-                <li data-target="1" class="active">Missão</li>
-                <li data-target="2">Visão   </li>
-                <li data-target="3">Missão</li>
+                <li data-tab="1" class="active">Missão</li>
+                <li data-tab="2">Visão   </li>
+                <li data-tab="3">Missão</li>
               </ul>
               <ul class="targets">
-                <li data-tab="1" class="active">
+                <li data-tab-index="1" class="active">
                   <div class="content">
                     <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vel repudiandae recusandae, laudantium reprehenderit consequuntur atque, corporis numquam aspernatur ipsam eveniet repellat, magnam delectus, amet quas temporibus ipsum aperiam vitae!</p>
                   </div>
                 </li>
-                <li data-tab="2"> 
+                <li data-tab-index="2"> 
                   <div class="content">
                     <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, aspernatur veritatis quos quaerat sit odio voluptates, voluptatibus qui corrupti atque reiciendis eius nihil. Inventore ipsa nulla et cum quasi. Deleniti consequuntur ea labore. Inventore voluptatem dolor quia earum nostrum, pariatur. Delectus incidunt laboriosam voluptatum at! Accusamus omnis voluptate, similique quas aut architecto tempora sed deserunt itaque? Quis, animi praesentium ipsam. </p>
                   </div>
                 </li>
-                <li data-tab="3"> 
+                <li data-tab-index="3"> 
                   <div class="content">
                     <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quo illum rerum alias excepturi, fugiat tenetur cum libero reprehenderit minus. Debitis, numquam neque delectus blanditiis eius, amet quae magni ex sed aperiam, non nobis! Debitis saepe recusandae eos, unde similique nemo tempore dignissimos magni earum quas excepturi sint dolorem tempora in distinctio voluptatum possimus dolores et labore nobis nam, eius atque quisquam quos! Voluptate quidem expedita, iste earum ipsum. Dicta eaque eveniet, magni fugiat facere rem cum quam illo enim rerum corrupti adipisci magnam explicabo pariatur, similique velit temporibus consequuntur.</p>
                   </div>
@@ -152,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section data-scroll-index="5" class="partners light">
+    <section data-scroll-index="2" class="partners light">
       <div class="container">
         <h3 class="title"> <strong>Nossos </strong>Parceiros</h3>
         <div class="partners-carousel">
@@ -169,26 +156,57 @@
         </div>
       </div>
     </section>
+    <section data-scroll-index="3" class="contact">
+      <div class="container">
+        <h2 class="title"> <strong>Entre </strong>em contato</h2>
+        <div class="info-box">
+          <div class="info"><i class="fa fa-envelope-o"></i><span class="text-center">contato@maisum.social</span></div>
+        </div>
+        <form action="" class="contact">
+          <div class="content">
+            <div class="box">
+              <div class="input-addon"><i class="fa fa-user"></i>
+                <input type="text" placeholder="Nome Completo">
+              </div>
+              <div class="input-addon"><i class="fa fa-envelope-o"></i>
+                <input type="email" placeholder="E-Mail">
+              </div>
+              <div class="input-addon"><i class="fa fa-volume-up"></i>
+                <input type="text" placeholder="Assunto">
+              </div>
+            </div>
+            <div class="box">
+              <div class="input-addon"><i class="fa fa-pencil"></i>
+                <textarea name="" placeholder="Mensagem"></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
     <footer>
       <div class="container">
-        <div class="newsletter"><img src="assets/images/logo/default.png" alt="Mais Um">
+        <div class="newsletter"><img src="assets/images/logo/alt.png" alt="Mais Um"/>
           <form action="" class="signup">
-            <input type="text" placeholder="Seu E-Mail">
+            <input type="text" placeholder="Seu E-Mail"/>
             <button type="submit">Fique Atualizado !</button>
           </form>
         </div>
       </div>
       <div class="copyright">
         <div class="container">
-          <p>&copy; mais um - Todos os direitos reservados - 2015</p><a href="http://www.agenciadzoe.com.br" class="developer"><img src="http://agenciadzoe.com.br/assets/public/images/logo.png" alt="Agência dZoë" height="30"></a>
+          <p>&copy; MaisUm - Todos os direitos reservados - 2016</p><a href="http://www.agenciadzoe.com.br" class="developer"><img src="http://www.agenciadzoe.com.br/assets/public/images/logo.png" alt="Agência dZoë" height="30"/></a>
         </div>
       </div>
     </footer>
     <div class="scroll-top"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
+    <div class="fb-root">           </div>
     <script type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="assets/scripts/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="assets/scripts/owl.carousel.min.js"></script>
     <script type="text/javascript" src="assets/scripts/scrollIt.js"></script>
+    <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/functions.min.js"></script>
   </body>
 </html>
