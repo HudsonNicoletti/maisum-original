@@ -13,7 +13,7 @@
     <header data-scroll-index="1">
       <div class="main-section">
         <div class="logo"></div>
-        <div class="social"><a href="/blog"><i class="fa fa-newspaper-o"></i></a><a href="https://www.facebook.com/redemaisum/"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/redemais1"><i class="fa fa-twitter"></i></a><a href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"><i class="fa fa-youtube-play"></i></a><a href="https://www.instagram.com/redemaisum/"><i class="fa fa-instagram"></i></a></div>
+        <div class="social"><a data-toggle="tooltip" title="Facebook" href="https://www.facebook.com/redemaisum/"><i class="fa fa-facebook"></i></a><a data-toggle="tooltip" title="Twitter" href="https://twitter.com/redemais1"><i class="fa fa-twitter"></i></a><a data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"><i class="fa fa-youtube-play"></i></a><a data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/redemaisum/"><i class="fa fa-instagram"></i></a><a data-toggle="tooltip" title="Blog" href="/blog"><i class="fa fa-newspaper-o"></i></a></div>
       </div>
       <nav>
         <div class="menu-logo"></div>
@@ -22,8 +22,9 @@
           <li data-scroll-nav="2"><a href="#">Faça o Bem</a></li>
           <li data-scroll-nav="3"><a href="#">Interaja + </a></li>
           <li data-scroll-nav="4"><a href="#">Causas</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="/about.html">Sobre</a></li>
           <li data-scroll-nav="5"><a href="#">Parceiros</a></li>
+          <li data-scroll-nav="6"><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
@@ -50,7 +51,7 @@
       </ul>
     </section>
     <section data-scroll-index="2" data-tab-set="1" class="tabbed">
-      <div class="header">
+      <div class="header bar-title">
         <div class="container">
           <h2 class="title">Faça o Bem   </h2>
         </div>
@@ -353,7 +354,7 @@
       </div>
     </section>
     <section data-scroll-index="3" data-tab-set="2" class="tabbed">
-      <div class="header">
+      <div class="header bar-title">
         <div class="container">
           <h2 class="title">Interaja +</h2>
         </div>
@@ -395,7 +396,12 @@
       </div>
     </section>
     <section data-scroll-index="4" class="donation-feed">
-      <div class="container">
+      <div class="header bar-title">
+        <div class="container">
+          <h2 class="title">Causas</h2>
+        </div>
+      </div>
+      <div class="container content">
         <div class="info-left">
           <h3>causa <br> mais <br><strong>Urgente</strong></h3>
         </div>
@@ -411,22 +417,6 @@
           <h3> <strong>R$ 80 000 </strong>Necessários</h3>
           <h3> <strong>R$ 75 000  </strong>Conseguidos</h3>
           <h3> <strong>2000 </strong>Doadores</h3>
-        </div>
-      </div>
-      <div class="container">
-        <div class="testimonies">
-          <div class="testimony">
-            <p> A única possibilidade de Mudar o Mundo de uma forma global é começar essas mudanças de forma local.</p>
-            <h4>Fábio <small>Rodrigo de Almeida</small></h4>
-          </div>
-          <div class="testimony">
-            <p> A única possibilidade de Mudar o Mundo de uma forma global é começar essas mudanças de forma local.</p>
-            <h4>Fábio <small>Rodrigo de Almeida</small></h4>
-          </div>
-          <div class="testimony">
-            <p> A única possibilidade de Mudar o Mundo de uma forma global é começar essas mudanças de forma local.</p>
-            <h4>Fábio <small>Rodrigo de Almeida</small></h4>
-          </div>
         </div>
       </div>
     </section>
@@ -509,11 +499,10 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section data-scroll-index="6" class="contact">
       <div class="container">
         <h2 class="title"> <strong>Entre </strong>em contato</h2>
         <div class="info-box">
-          <div class="info"><i class="fa fa-phone"></i><span class="text-center">(43) 1234.5678</span></div>
           <div class="info"><i class="fa fa-envelope-o"></i><span class="text-center">contato@maisum.social</span></div>
         </div>
         <form action="" class="contact">
@@ -560,6 +549,7 @@
     <script type="text/javascript" src="assets/scripts/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="assets/scripts/owl.carousel.min.js"></script>
     <script type="text/javascript" src="assets/scripts/scrollIt.js"></script>
+    <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/functions.min.js"></script>
   </body>
 </html>

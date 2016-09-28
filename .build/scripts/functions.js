@@ -91,6 +91,7 @@
 
           $tab.on("click",function(){
             var target = $(this).data("tab");
+            $tab.removeClass("active").filter("[data-tab='"+target+"']").addClass("active");
             $indexs.removeClass("active").filter("[data-tab-index='"+target+"']").addClass("active");
           });
         });
@@ -186,6 +187,10 @@
             return owl;
         }
 
+        if($('[data-toggle="tooltip"]').length)
+        {
+          $('[data-toggle="tooltip"]').tooltip();
+        }
 
         $mobileToggle.on("click", function(){
             toggleMenu();
@@ -227,10 +232,6 @@
             partnersInit();
             causesInit();
             aboutSliderInit();
-
-            $tabsIndexes.on("click", function(){
-               tabs( $(this) )
-            });
         }
 
         function percentageFill()

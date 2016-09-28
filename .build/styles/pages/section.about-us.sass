@@ -1,65 +1,65 @@
 section.about-us
     padding: 15px
-    
+
     .container
         display: flex
         align-items: center
         justify-content: center
         flex-direction: column
-        
+
         @media( max-width: 960px )
             width: 100%
-            
+
         .content
             display: flex
             align-items: flex-start
             justify-content: center
             flex-direction: row
             width: 100%
-            
+
             @media( max-width: 960px )
                 flex-direction: column
-            
+
         .half
             width: 50%
             padding: 15px
             @media( max-width: 960px )
                 width: 100%
-                
+
             .about-text
-                
+
                 .question
                     font:
                         size: 20px
                     padding: 10px 0
-                
+
                 p
                     text-align: justify
-                    
+
                     strong.handwriting
                         font:
                             size: 30px
                             weight: 300
-                            
+
             .about-slider
                 @media( max-width: 960px)
                     margin-top: 0
                 img
                     width: 100%
-                    
+
             .recent
                 @extend section.recent
-                    
+
                 .container
                     border-bottom: none !important
                     width: 100% !important
                     justify-content: flex-start !important
-                    
+
                     h2.title
                         font-size: 50px !important
-                    
+
             .tabs
-            
+
                 ul
                     list-style: none
                     display: flex
@@ -68,23 +68,23 @@ section.about-us
                     padding: 0
                     margin: 0
                     width: 100%
-                
-                    &.indexes                        
+
+                    &.indexes
                         flex-direction: row
-                    
+
                         @media( max-width: 640px)
                             flex-direction: column
-                        
+
                             li
                                 border-radius: 0px !important
                                 border:
                                     bottom: solid 1px $_primary-white !important
                                     right: solid 1px $_primary-green !important
                                     left: solid 1px $_primary-green !important
-                            
+
                             li.active
                                 border-radius: 8px 8px 0 0 !important
-                        
+
                         li
                             border:
                                 top:     solid 1px $_primary-greyL
@@ -100,7 +100,7 @@ section.about-us
                             color: $_primary-black
                             text-transform: lowercase
                             cursor: pointer
-                        
+
                         li.active
                             border:
                                 top:     solid 1px $_primary-green
@@ -108,13 +108,13 @@ section.about-us
                                 left:    solid 1px $_primary-green
                                 right:   solid 1px $_primary-green
                             color: $_primary-green
-                        
+
                     &.targets
                         flex-direction: column
-                
+
                     li
                         width: 100%
-                        
+
                         .content
                             border:
                                 top:     solid 1px $_primary-white
@@ -125,13 +125,13 @@ section.about-us
                             display: none
                             width: 100%
                             padding: 15px
-                        
+
                         &.active
                             .content
                                 display: block
-                    
+
 /* OWL THEME */
-                    
+
 .about-us-owl .owl-controls
     margin-top: 10px
     text-align: center
@@ -152,7 +152,7 @@ section.about-us
 .about-us-owl .owl-controls.clickable .owl-buttons div:hover
     opacity: 1
     text-decoration: none
-    
+
 .about-us-owl .owl-controls .owl-page
     display: inline-block
     zoom: 1
