@@ -41,19 +41,17 @@ section.tabbed
     overflow: hidden
 
     .contents
-      display: none
       align-items: flex-start
       justify-content: center
       flex-direction: column
-      height: 0px
+      height: auto
       transition: all 0.15s linear
-      opacity: 0
+      display: none
 
       &.active
         padding: 15px
-        display: flex
         height: auto
-        opacity: 1
+        display: flex
 
         p
           text-align: justify

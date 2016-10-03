@@ -90,9 +90,21 @@
               $indexs = $(this).find("[data-tab-index]");
 
           $tab.on("click",function(){
-            var target = $(this).data("tab");
+            var target  = $(this).data("tab"),
+                $content = $indexs.filter("[data-tab-index='"+target+"']");
+
             $tab.removeClass("active").filter("[data-tab='"+target+"']").addClass("active");
-            $indexs.removeClass("active").filter("[data-tab-index='"+target+"']").addClass("active");
+            $indexs.removeClass("active");
+            $content.addClass("active");
+
+            if($content.hasClass("active"))
+            {
+              $htmlbody.animate({
+                scrollTop : ($content.offset().top - 60)
+              },800);
+            }
+
+            return false;
           });
         });
 
