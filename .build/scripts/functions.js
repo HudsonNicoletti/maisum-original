@@ -204,6 +204,12 @@
           $('[data-toggle="tooltip"]').tooltip();
         }
 
+        $("input[id*=-8]").on("click",function(){
+          var sb = $(this).siblings("input");
+
+          sb.toggleClass("hidden");
+        })
+
         $mobileToggle.on("click", function(){
             toggleMenu();
             $mobileToggle.toggleClass("active");
