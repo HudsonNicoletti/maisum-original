@@ -192,13 +192,6 @@
             return owl;
         }
 
-        function aboutSliderInit()
-        {
-            var owl = $aboutSliderWrap.owlCarousel(aboutSliderConfig);
-
-            return owl;
-        }
-
         if($('[data-toggle="tooltip"]').length)
         {
           $('[data-toggle="tooltip"]').tooltip();
@@ -242,14 +235,6 @@
                 topOffset: -60,
                 activeClass: 'active'
             });
-        }
-
-        if( $body.hasClass("about-us") )
-        {
-            CausesConfig.singleItem = true;
-            partnersInit();
-            causesInit();
-            aboutSliderInit();
         }
 
         function percentageFill()
