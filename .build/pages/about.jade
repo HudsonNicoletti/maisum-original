@@ -33,115 +33,65 @@ html
                 ul
                     li(): a(href="/index.html") Home
                     li(data-scroll-nav="1"): a(href="#") Sobre
-                    li(data-scroll-nav="2"): a(href="#") Parceiros
-                    li(data-scroll-nav="3"): a(href="#") Contato
+                    li(data-scroll-nav="2"): a(href="#") Contato
                     
-        section.sitemap
+        section.about-us.how.tabbed(data-scroll-index="1")
+          .header.bar-title
             .container
-                ul
-                    li: a(href="#") Home
-                    li: a(href="#") Mais Um
-                    
-        section.about-us(data-scroll-index="1")
+              h2.title Como Tudo Começou?
+          .container
+            .content
+              p A Mais Um surgiu em 2014 após uma reportagem da TV local sobre a dificuldade do Hospital do Câncer de Londrina em conseguir R$ 100.000,00 para equipar o centro cirúrgico infantil. Surgiu, então, a ideia de criar uma rede de colaboradores com a possibilidade de arrecadar e incentivar as pessoas a defenderem causas que ajudem as instituições sociais.
+              img.icon(src="assets/images/icons/5.png", alt="") 
+              
+        section.about-us.why.tabbed(data-scroll-index="1")
+          .header.bar-title
             .container
-                .content
-                    .half
-                        .about-text
-                            h3.title Sobre a 
-                                strong.primary Mais Um
-                            p A Mais Um surgiu em 2014 após uma reportagem da Tv local sobre a dificuldade do Hospital do Câncer de Londrina em conseguir R$ 100.000,00 para equipar o centro cirúrgico infantil. Daí surgiu a ideia de criar uma rede de colaboradores com a possibilidade de arrecadar e incentivar as pessoas a defenderem causas e ajudarem financeiramente essas instituições sociais.
-                            strong.primary.question Porque uma rede de colaboradores?
-        
-                            p O nosso pensamento é reunir o maior número de pessoas que tenham vontade de fazer algo diferente e que tenha relevância para uma mudança social.
-        
-                            p Desde o início, o objetivo foi criar uma ponte em que a Mais Um consiga em curto espaço de tempo mobilizar um número grande de pessoas conseguindo desta forma uma pequena colaboração do participante e que no final possa reunir um montante significativo para a organização beneficiada.
-        
-                            p O desafio passou a ser “o como” movimentar uma rede desta maneira. Novas ideias apareceram e a pequena ideia de reunir um grupo passou a ser a criação de uma empresa que pudesse movimentar o terceiro setor do país e aumentar a área de abrangência da Mais Um.
-        
-                            p Criamos a rede, colocamos o site no ar e disponibilizamos um aplicativo para diminuir a distância entre a rede e o nosso colaborador.
-        
-                            p Esperamos você na nossa rede colaborativa e, 
-                                strong.primary.handwriting #sejamaisum  
-                                |mudando o mundo!!!!
-                        .tabs(data-tab-set="1")
-                            ul.indexes
-                                li.active(data-tab="1") Missão
-                                li(data-tab="2") Visão   
-                                li(data-tab="3") Missão
-                            ul.targets
-                                li.active(data-tab-index="1")
-                                    .content
-                                        p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vel repudiandae recusandae, laudantium reprehenderit consequuntur atque, corporis numquam aspernatur ipsam eveniet repellat, magnam delectus, amet quas temporibus ipsum aperiam vitae!
-                                li(data-tab-index="2") 
-                                    .content
-                                        p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, aspernatur veritatis quos quaerat sit odio voluptates, voluptatibus qui corrupti atque reiciendis eius nihil. Inventore ipsa nulla et cum quasi. Deleniti consequuntur ea labore. Inventore voluptatem dolor quia earum nostrum, pariatur. Delectus incidunt laboriosam voluptatum at! Accusamus omnis voluptate, similique quas aut architecto tempora sed deserunt itaque? Quis, animi praesentium ipsam. 
-                                li(data-tab-index="3") 
-                                    .content
-                                        p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quo illum rerum alias excepturi, fugiat tenetur cum libero reprehenderit minus. Debitis, numquam neque delectus blanditiis eius, amet quae magni ex sed aperiam, non nobis! Debitis saepe recusandae eos, unde similique nemo tempore dignissimos magni earum quas excepturi sint dolorem tempora in distinctio voluptatum possimus dolores et labore nobis nam, eius atque quisquam quos! Voluptate quidem expedita, iste earum ipsum. Dicta eaque eveniet, magni fugiat facere rem cum quam illo enim rerum corrupti adipisci magnam explicabo pariatur, similique velit temporibus consequuntur.
-                        
-                    .half
-                        .about-slider
-                            figure
-                                img(src="assets/images/content/about-us/slider/01.jpg", alt="")
-                            figure
-                                img(src="assets/images/content/about-us/slider/01.jpg", alt="")
-                            figure
-                                img(src="assets/images/content/about-us/slider/01.jpg", alt="")
-                            figure
-                                img(src="assets/images/content/about-us/slider/01.jpg", alt="")
-                            figure
-                                img(src="assets/images/content/about-us/slider/01.jpg", alt="")                               
-                        
-                        .recent
-                            .container
-                                h2.title 
-                                    strong Causas 
-                                    | Recentes
-                                .causes
-                                    +cause("assets/images/content/causes/03.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",80,80,"#")
-                                    +cause("assets/images/content/causes/02.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",50,60,"#")
-                                    +cause("assets/images/content/causes/01.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",75,90,"#")
-                                    +cause("assets/images/content/causes/03.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",80,80,"#")
-                                    +cause("assets/images/content/causes/02.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",50,60,"#")
-                                    +cause("assets/images/content/causes/01.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",75,90,"#")
-                                    
-        section.partners.light(data-scroll-index="2")
+              h2.title E Para Quê?
+          .container
+            .content
+              p Nosso objetivo é criar pontes entre as pessoas, que tenham vontade de fazer a diferença realizando mudanças sociais, e as entidades assistenciais. Acreditamos que para estas entidades, é igualmente importante arrecadar recursos financeiros, e convocar pessoas do bem criando uma rede de colaboradores. 
+                
+              
+        section.about-us.collab.tabbed(data-scroll-index="1")
+          .header.bar-title
             .container
-                h3.title 
-                    strong Nossos 
-                    | Parceiros
-                    
-                .partners-carousel
-                    +partners()
-                        
-        section.contact(data-scroll-index="3")
+              h2.title Por que uma rede de colaboradores?
+          .container
+            .content
+              p Inspirados pela expressão “juntos podemos mais”, pensamos que quanto mais pessoas abraçarem a causa (entrando na rede), mais conteúdo será compartilhado pelo mundo, consequentemente mais pessoas poderão conhecer e apoiar as instituições sociais.
+              p Como pontapé inicial, criamos nosso perfil nas principais redes sociais convidando as pessoas à conhecerem nossa ideia. Criamos o site institucional e o aplicativo, que em breve, receberão características de rede social, e oferecerão ferramentas para que as entidades divulguem suas ações e recebam o que estão buscando na Rede Mais Um, como voluntários, investidores, doações, enfim, tudo para o bem.
+              p O desafio, agora, é movimentar a rede, incentivar o surgimento de novas ideias e reunir pessoas que apoiam as causas, para aumentar expressivamente a abrangência da Mais Um pelo país.
+              p Esperamos você na nossa rede colaborativa e, <strong>#sejamaisum</strong> mudando o mundo!!!!
+          .footer
+          
+        section.about-us.contact(data-scroll-index="2")
+          .header.bar-title
             .container
-                h2.title 
-                    strong Entre 
-                    | em contato
-                .info-box
-                    .info
-                        i.fa.fa-envelope-o
-                        span.text-center contato@maisum.social
-                        
-                form.contact(action="")
-                    .content
-                        .box
-                            .input-addon
-                                i.fa.fa-user
-                                input(type="text",placeholder="Nome Completo")
-                            .input-addon
-                                i.fa.fa-envelope-o
-                                input(type="email",placeholder="E-Mail")
-                            .input-addon
-                                i.fa.fa-volume-up
-                                input(type="text",placeholder="Assunto")
-                        .box
-                            .input-addon
-                                i.fa.fa-pencil
-                                textarea(name="",placeholder="Mensagem")
-                    button(type="submit") Enviar
-                    
+              h2.title entre em contato!
+          .container
+              .info-box
+                  .info
+                      i.fa.fa-envelope-o
+                      span.text-center contato@maisum.social
+                      
+              form.contact(action="")
+                  .content
+                      .box
+                          .input-addon
+                              i.fa.fa-user
+                              input(type="text",placeholder="Nome Completo")
+                          .input-addon
+                              i.fa.fa-envelope-o
+                              input(type="email",placeholder="E-Mail")
+                          .input-addon
+                              i.fa.fa-volume-up
+                              input(type="text",placeholder="Assunto")
+                      .box
+                          .input-addon
+                              i.fa.fa-pencil
+                              textarea(name="",placeholder="Mensagem")
+                  button(type="submit") Enviar
         +footer
                 
                     
