@@ -59,6 +59,8 @@
               ]
             },
             PartnersConfig    = {
+                center  : true,
+                loop    : true,
                 autoPlay : true,
                 navigation : false,
                 slideSpeed : 300,
@@ -201,7 +203,20 @@
           var sb = $(this).siblings("input");
 
           sb.toggleClass("hidden");
+
         })
+
+        if($("input[id*=-tgl]").length)
+        {
+          $("input[id*=-tgl]").each(function(){
+            var $this = $(this);
+
+            $this.on("click",function(){
+              $("input[id*=-tgl]").siblings("input").addClass("hidden");
+              $(this).siblings("input").removeClass("hidden");
+            });
+          });
+        }
 
         $mobileToggle.on("click", function(){
             toggleMenu();

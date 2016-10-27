@@ -20,6 +20,7 @@ module.exports = function(grunt){
                 files: {
                     "../index.html":        "pages/index.jade",
                     "../about.html":        "pages/about.jade",
+                    "../donate.html":        "pages/donate.jade",
                 }
             }
         },
@@ -68,7 +69,7 @@ module.exports = function(grunt){
         watch: {
             sass:
             {
-                files: ['styles/*.sass'],
+                files: ['styles/*.sass','styles/*/*.sass'],
                 tasks: ['sass','rucksack','postcss:dist'],
                 options: {
                   livereload: true,
@@ -86,14 +87,6 @@ module.exports = function(grunt){
             {
                 files: ['scripts/*.js'],
                 tasks: ['uglify'],
-                options: {
-                  livereload: true,
-                }
-            },
-            images:
-            {
-                files: ['../assets/images/**/*'],
-                tasks: ['imagemin'],
                 options: {
                   livereload: true,
                 }
