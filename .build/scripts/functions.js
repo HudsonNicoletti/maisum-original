@@ -271,9 +271,26 @@
         }
         percentageFill();
 
+        if($("[data-account-option]").length)
+        {
+          var $opt = $("[data-account-option]");
+          $opt.each(function(){
+            var $this = $(this);
+
+            $this.on("click",function(){
+              var opt = $(this).data("account-option");
+
+              $("form[data-option]").filter("[data-option!='"+opt+"']").addClass("hidden");
+              $("form[data-option]").filter("[data-option='"+opt+"']").removeClass("hidden");
+            });
+          });
+          $opt.filter("[checked='checked']").trigger("click");
+        }
+
     });
 
 })(jQuery);
+
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

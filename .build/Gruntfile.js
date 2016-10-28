@@ -20,7 +20,9 @@ module.exports = function(grunt){
                 files: {
                     "../index.html":        "pages/index.jade",
                     "../about.html":        "pages/about.jade",
-                    "../donate.html":        "pages/donate.jade",
+                    "../donate.html":       "pages/donate.jade",
+                    "../login.html":        "pages/login.jade",
+                    "../payment.html":      "pages/payment.jade",
                 }
             }
         },
