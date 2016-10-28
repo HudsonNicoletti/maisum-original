@@ -26,18 +26,29 @@ section.donate
 
   &.info
     .bar-title
-      background-color: $_primary-orange
+      background-color: $_primary-green
 
     .content
       flex-direction: row
       align-items: flex-start
       padding: 40px 0
 
+
+      @media( max-width: 960px )
+        flex-direction: column-reverse
+
+        aside, main
+          width: 100% !important
+          ul, .help
+            display: flex
+            justify-content: center
+            flex-direction: column
+
       aside
         flex-direction: column
         align-items: flex-start
         padding: 0 15px
-        width: 25%
+        width: 33%
 
         .title
           display: inline-block
@@ -47,6 +58,7 @@ section.donate
             size: 46px
             weight: 900
           text-transform: uppercase
+          margin: 0 auto
 
         ul
           list-style: none
@@ -164,7 +176,7 @@ section.donate
       main
         flex-direction: column
         align-items: flex-start
-        width: 75%
+        width: 67%
 
       figure
         position: relative
@@ -208,6 +220,15 @@ section.donate
       justify-content: flex-start
       flex-direction: row
       flex-wrap: wrap
+
+      @media( max-width: 960px )
+        li.donator
+          width: 50% !important
+
+      @media( max-width: 640px )
+        li.donator
+          width: 100% !important
+
 
       li.donator
         width: 33.3%
