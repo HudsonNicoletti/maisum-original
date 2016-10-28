@@ -1,0 +1,208 @@
+include mixins
+
+doctype html
+html
+    head
+    
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Mais Um")
+        meta(name="author" content="Hudson Nicoletti")
+    
+        title  Mais Um
+        
+        link(rel="stylesheet", href="assets/styles/main.css")
+        link(rel="shortcut icon" href="/favicon.ico")
+    body.donate
+                 
+        header(data-scroll-index="1")
+            .main-section
+                .logo
+                .social
+                    a(data-toggle="tooltip", title="Facebook", href="https://www.facebook.com/redemaisum/"): i.fa.fa-facebook
+                    a(data-toggle="tooltip", title="Twitter", href="https://twitter.com/redemais1"): i.fa.fa-twitter
+                    a(data-toggle="tooltip", title="Youtube", href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"): i.fa.fa-youtube-play
+                    a(data-toggle="tooltip", title="Instagram", href="https://www.instagram.com/redemaisum/"): i.fa.fa-instagram
+                    a(data-toggle="tooltip", title="Blog", href="/blog"): i.fa.fa-newspaper-o
+            nav
+                .menu-logo
+                .menu-toggle
+                    span.bar
+                    span.bar
+                    span.bar
+                ul
+                    li(): a(href="/index.html") Home
+                    li(data-scroll-nav="1"): a(href="#") Doe
+                    li(data-scroll-nav="2"): a(href="#") Contato            
+              
+        section.donate.info.tabbed(data-scroll-index="1")
+          .header.bar-title 
+            .container
+              h2.title  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, mollitia.
+          .container
+            .content
+              aside
+                ul
+                  h2.title Doações
+                  li 
+                    span
+                      i.fa.fa-star
+                      | R$ 80.000,00 Necessários
+                  li 
+                    span
+                      i.fa.fa-star-half-o
+                      | R$ 30.000,00 Conseguidos
+                  li 
+                    span
+                      i.fa.fa-heartbeat
+                      | 2679 Doadores
+                ul
+                  h2.title Sobre
+                  li 
+                    span 
+                      i.fa.fa-building-o
+                      | Fundado em 2001
+                  li 
+                    span
+                      i.fa.fa-users
+                      | 34 Funcionários
+                  li 
+                    span
+                      i.fa.fa-heart-o
+                      | 12 Voluntários
+                  li 
+                    span
+                      i.fa.fa-university
+                      | 2 Unidades
+                ul
+                  h2.title Contato
+                  li 
+                    span 
+                      i.fa.fa-envelope-o
+                      span nomedaempresa@contato.com.br
+                  li 
+                    span 
+                      i.fa.fa-map-marker
+                      span Londrina, PR
+                  li 
+                    span 
+                      i.fa.fa-home
+                      span Estrada do Moinho Velho, 243
+                  li 
+                    span 
+                      i.fa.fa-phone
+                      span (11) 4704-2920
+                  li 
+                    span 
+                      i.fa.fa-globe
+                      a(href="#") Acesse nosso WebSite!
+                  li 
+                    span 
+                      i.fa.fa-facebook
+                      a(href="#") Acesse nossa Facebook!
+                  li 
+                    span 
+                      i.fa.fa-twitter
+                      a(href="#") Acesse nosso Twitter!
+                div.help
+                  h2.title Colabore
+                  form(action="login.html")
+                    fieldset(style="margin-top:20px")
+                      .input-group.half
+                        input(type="radio",name="donation",value="500",id="donation-1-tgl")
+                        label(for="donation-1-tgl") R$ 5.00
+                      .input-group.half
+                        input(type="radio",name="donation",value="1000",id="donation-2-tgl")
+                        label(for="donation-2-tgl") R$ 10.00
+                      .input-group.half
+                        input(type="radio",name="donation",value="1500",id="donation-3-tgl")
+                        label(for="donation-3-tgl") R$ 15.00
+                      .input-group.half
+                        input(type="radio",name="donation",value="2000",id="donation-4-tgl")
+                        label(for="donation-4-tgl") R$ 20.00
+                      .input-group.half
+                        input(type="radio",name="donation",value="5000",id="donation-5-tgl")
+                        label(for="donation-5-tgl") R$ 50.00
+                      .input-group.half
+                        input(type="radio",name="donation",value="10000",id="donation-6-tgl")
+                        label(for="donation-6-tgl") R$ 100.00
+                      .input-group
+                        input(type="radio",name="donation",value="1",id="donation-7-tgl")
+                        label(for="donation-7-tgl") Outro Valor
+                        input(type="text",name="others",placeholder="Mínimo R$ 5.00",class="hidden other tgl")
+                    
+                      h4 Opções:
+                      .input-group
+                        input(type="checkbox",name="donation",value="1",id="donation-opt1")
+                        label(for="donation-opt1") Continuar contribuindo com a organização mensalmente
+                      .input-group
+                        input(type="checkbox",name="donation",value="1",id="donation-opt2")
+                        label(for="donation-opt2") Não divulgar minha contribuição publicamente
+                      .input-group
+                        button(type="submit") Colaborar !
+              main
+                figure(style="background-image: url('assets/images/content/causes/01.jpg')")
+                p Inspirados pela expressão “juntos podemos mais”, pensamos que quanto mais pessoas abraçarem a causa (entrando na rede), mais conteúdo será compartilhado pelo mundo, consequentemente mais pessoas poderão conhecer e apoiar as instituições sociais.
+                p Como pontapé inicial, criamos nosso perfil nas principais redes sociais convidando as pessoas à conhecerem nossa ideia. Criamos o site institucional e o aplicativo, que em breve, receberão características de rede social, e oferecerão ferramentas para que as entidades divulguem suas ações e recebam o que estão buscando na Rede Mais Um, como voluntários, investidores, doações, enfim, tudo para o bem.
+                p O desafio, agora, é movimentar a rede, incentivar o surgimento de novas ideias e reunir pessoas que apoiam as causas, para aumentar expressivamente a abrangência da Mais Um pelo país.
+                p Esperamos você na nossa rede colaborativa e, <strong>#sejamaisum</strong> mudando o mundo!!!!
+          .footer
+          
+        section.donate.donators.tabbed
+          .header.bar-title 
+            .container
+              h2.title Doadores
+          .container
+            ol.donators
+              - for (var x = 1; x < 16; x++)
+                li.donator
+                  article
+                    .image
+                      img(src="//placehold.it/50", alt="")
+                    .name
+                      span Jhon Doe
+                      small em 10/10/2016
+                      span.amount ajudou com <strong>R$ 30,00</strong>     
+            button Carregar Mais !
+          
+        section.about-us.contact(data-scroll-index="2")
+          .header.bar-title
+            .container
+              h2.title entre em contato!
+          .container
+              .info-box
+                  .info
+                      i.fa.fa-envelope-o
+                      span.text-center contato@maisum.social
+                      
+              form.contact(action="")
+                  .content
+                      .box
+                          .input-addon
+                              i.fa.fa-user
+                              input(type="text",placeholder="Nome Completo")
+                          .input-addon
+                              i.fa.fa-envelope-o
+                              input(type="email",placeholder="E-Mail")
+                          .input-addon
+                              i.fa.fa-volume-up
+                              input(type="text",placeholder="Assunto")
+                      .box
+                          .input-addon
+                              i.fa.fa-pencil
+                              textarea(name="",placeholder="Mensagem")
+                  button(type="submit") Enviar
+        +footer
+                
+                    
+        .scroll-top
+            a(href="#")
+                i.fa.fa-chevron-up
+        
+        .fb-root            
+        script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
+        script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
+        script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")
+        script(type="text/javascript" src="assets/scripts/scrollIt.js")
+        script(type="text/javascript" src="assets/scripts/bootstrap.min.js")
+        script(type="text/javascript" src="assets/scripts/functions.min.js")

@@ -1,0 +1,115 @@
+include mixins
+
+doctype html
+html
+    head
+    
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Mais Um")
+        meta(name="author" content="Hudson Nicoletti")
+    
+        title  Mais Um
+        
+        link(rel="stylesheet", href="assets/styles/main.css")
+        link(rel="shortcut icon" href="/favicon.ico")
+    body.login
+                 
+        header(data-scroll-index="1")
+            .main-section
+                .logo
+                .social
+                    a(data-toggle="tooltip", title="Facebook", href="https://www.facebook.com/redemaisum/"): i.fa.fa-facebook
+                    a(data-toggle="tooltip", title="Twitter", href="https://twitter.com/redemais1"): i.fa.fa-twitter
+                    a(data-toggle="tooltip", title="Youtube", href="https://www.youtube.com/channel/UC9f3AXV4wuYUgI6gU8hcy0w"): i.fa.fa-youtube-play
+                    a(data-toggle="tooltip", title="Instagram", href="https://www.instagram.com/redemaisum/"): i.fa.fa-instagram
+                    a(data-toggle="tooltip", title="Blog", href="/blog"): i.fa.fa-newspaper-o
+            nav
+                .menu-logo
+                .menu-toggle
+                    span.bar
+                    span.bar
+                    span.bar
+                ul
+                    li(): a(href="/index.html") Home
+                    li(data-scroll-nav="1"): a(href="#") Doe
+                    li(data-scroll-nav="2"): a(href="#") Contato            
+              
+        section.login.info.tabbed(data-scroll-index="1")
+          .header.bar-title 
+            .container
+              h2.title Identificação
+          .container
+            .content
+        
+              .row
+                .input-group.notfull
+                  input(type="radio",name="account",value="1",id="account-option-1",data-account-option="1")
+                  label(for="account-option-1") Já Tenho Cadastro
+                .input-group.notfull
+                  input(type="radio",name="account",value="2",id="account-option-2",data-account-option="2",checked="checked")
+                  label(for="account-option-2") Não Tenho Cadastro
+                  
+              .row
+                form.hidden(action="payment.html",data-option="1")
+                  fieldset
+                    .input-group
+                      input.default(type="text",name="email",id="email",placeholder="Endereço de E-Mail")
+                    .input-group
+                      input.default(type="password",name="password",id="password",placeholder="Senha Pessoal")
+                    .input-group.center
+                      button.btn(type="submit") Acessar !
+                      
+                form.hidden(action="payment.html",data-option="2")
+                  fieldset
+                    .input-group
+                      input.default(type="text",name="name",id="name",placeholder="Nome Completo")
+                    .input-group
+                      input.default(type="text",name="email",id="email",placeholder="Endereço de E-Mail")
+                    .input-group
+                      input.default(type="password",name="password",id="password",placeholder="Senha Pessoal")
+                    .input-group.center
+                      button.btn(type="submit") Cadastrar !
+          
+        section.login.contact(data-scroll-index="2")
+          .header.bar-title
+            .container
+              h2.title entre em contato!
+          .container
+              .info-box
+                  .info
+                      i.fa.fa-envelope-o
+                      span.text-center contato@maisum.social
+                      
+              form.contact(action="")
+                  .content
+                      .box
+                          .input-addon
+                              i.fa.fa-user
+                              input(type="text",placeholder="Nome Completo")
+                          .input-addon
+                              i.fa.fa-envelope-o
+                              input(type="email",placeholder="E-Mail")
+                          .input-addon
+                              i.fa.fa-volume-up
+                              input(type="text",placeholder="Assunto")
+                      .box
+                          .input-addon
+                              i.fa.fa-pencil
+                              textarea(name="",placeholder="Mensagem")
+                  button(type="submit") Enviar
+        +footer
+                
+                    
+        .scroll-top
+            a(href="#")
+                i.fa.fa-chevron-up
+        
+        .fb-root            
+        script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
+        script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
+        script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")
+        script(type="text/javascript" src="assets/scripts/scrollIt.js")
+        script(type="text/javascript" src="assets/scripts/bootstrap.min.js")
+        script(type="text/javascript" src="assets/scripts/jquery.mask.min.js")
+        script(type="text/javascript" src="assets/scripts/functions.min.js")

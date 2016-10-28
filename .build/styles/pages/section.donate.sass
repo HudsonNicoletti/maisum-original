@@ -1,0 +1,292 @@
+section.donate
+  padding: 15px
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    @media( max-width: 960px )
+      width: 100%
+
+    .content
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: row
+      width: 100%
+
+      @media( max-width: 960px )
+        flex-direction: column
+
+      p
+        text-align: justify
+        font-size: 20px
+
+  &.info
+    .bar-title
+      background-color: $_primary-green
+
+    .content
+      flex-direction: row
+      align-items: flex-start
+      padding: 40px 0
+
+
+      @media( max-width: 960px )
+        flex-direction: column-reverse
+
+        aside, main
+          width: 100% !important
+          ul, .help
+            display: flex
+            justify-content: center
+            flex-direction: column
+
+      aside
+        flex-direction: column
+        align-items: flex-start
+        padding: 0 15px
+        width: 33%
+
+        .title
+          display: inline-block
+          max-width: 100%
+          font:
+            family: Open Sans
+            size: 46px
+            weight: 900
+          text-transform: uppercase
+          margin: 0 auto
+
+        ul
+          list-style: none
+          margin: 0
+          padding: 0
+
+          li
+            padding: 9px 0 10px 10px
+            border:
+              bottom: 1px solid rgba(0, 0, 0, 0.05)
+            span
+              font:
+                size: 18px
+                weight: 300
+
+              i.fa
+                display: inline-block
+                padding-right: 15px
+              span
+                word-break: break-all
+
+        form
+          .input-group
+            padding: 9px 0 10px 10px
+            border:
+              bottom: 1px solid rgba(0, 0, 0, 0.05)
+            &.half
+              width: 50%
+              float: left
+
+            button
+              background: $_primary-green
+              border: solid 1px $_primary-green
+              color: $_primary-white
+              padding: 10px 30px
+              letter-spacing: 0.25em
+              text-transform: uppercase
+              transition: all 0.15s linear 0s
+              margin: 30px 0
+
+              &:hover
+                background: rgba($_primary-green,.1)
+                color: $_primary-green
+
+            input
+              width: 100%
+              padding: 6px 0px
+              text-align: left
+
+              &.other
+                margin: 10px 0 0 0
+                padding: 6px 0 6px 10px
+
+            fieldset
+              width: 100%
+              .input-group
+                padding: 3px 0
+                width: 100%
+
+            [type="radio"]:not(:checked), [type="radio"]:checked, [type="checkbox"]:not(:checked), [type="checkbox"]:checked
+              position: absolute
+              left: -9999px
+
+            [type="radio"]:not(:checked) + label, [type="radio"]:checked + label , [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label
+              position: relative
+              padding: 6px 0 0 35px
+              cursor: pointer
+              font-weight: 300
+
+            /* checkbox aspect */
+            [type="radio"]:not(:checked) + label:before, [type="radio"]:checked + label:before , [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before
+              content: ''
+              position: absolute
+              left: 0
+              top: 2px
+              width: 26px
+              height: 26px
+              border: 1px solid #aaa
+              background: #f8f8f8
+              border-radius: 0px
+
+            /* checked mark aspect */
+            [type="radio"]:not(:checked) + label:after, [type="radio"]:checked + label:after , [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after
+              content: '\f00c'
+              font-family: 'FontAwesome'
+              position: absolute
+              top: 3px
+              left: 4px
+              font-size: 26px
+              line-height: 0.8
+              color: $_primary-green
+              transition: all .2s
+
+            /* checked mark aspect changes */
+            [type="radio"]:not(:checked) + label:after , [type="checkbox"]:not(:checked) + label:after
+              opacity: 0
+              transform: scale(0)
+
+            [type="radio"]:checked + label:after , [type="checkbox"]:checked + label:after
+              opacity: 1
+              transform: scale(1)
+
+            /* disabled checkbox */
+            [type="radio"]:disabled:not(:checked) + label:before, [type="radio"]:disabled:checked + label:before , [type="checkbox"]:disabled:not(:checked) + label:before, [type="checkbox"]:disabled:checked + label:before
+              box-shadow: none
+              border-color: #bbb
+              background-color: #ddd
+
+            [type="radio"]:disabled:checked + label:after , [type="checkbox"]:disabled:checked + label:after
+              color: #999
+
+            [type="radio"]:disabled + label , [type="checkbox"]:disabled + label
+              color: #aaa
+
+      main
+        flex-direction: column
+        align-items: flex-start
+        width: 67%
+
+      figure
+        position: relative
+        height: 500px
+        width: 100%
+        background:
+          repeat: no-repeat
+          size: cover
+          position: center
+      p
+        padding: 10px 0
+        strong
+          color: $_primary-orange
+
+    .footer
+      background:
+        image: url("/assets/images/content/about-pattern.png")
+        repeat: repeat-x
+        position: bottom left
+        size: contain
+
+      height: 138px
+      width: 100%
+
+  &.donators
+    padding: 0
+    background-color: $_primary-orange
+    .bar-title
+      background-color: $_primary-orange
+
+      .container
+        padding: inherit
+
+    ol.donators
+      list-style: none
+      margin: 0
+      padding: 0
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      flex-direction: row
+      flex-wrap: wrap
+
+      @media( max-width: 960px )
+        li.donator
+          width: 50% !important
+
+      @media( max-width: 640px )
+        li.donator
+          width: 100% !important
+
+
+      li.donator
+        width: 33.3%
+        padding: 9px 0 10px 10px
+        bottom: 1px solid rgba(0, 0, 0, 0.05)
+
+        article
+          width: 100%
+          display: flex
+          align-items: flex-start
+          justify-content: flex-start
+
+          .image
+            img
+              height: 80px
+              width: 80px
+          .name
+            padding: 0 15px
+            display: flex
+            flex-direction: column
+            span
+              display: inline-block
+              font:
+                size: 18px
+                weight: 900
+              color: $_primary-white
+              &.amount
+                font:
+                  size: 18px
+                  weight: 300
+                color: $_primary-white
+                strong
+
+            small
+              font:
+                size: 18px
+                weight: 300
+              color: $_primary-white
+
+    button
+      border: solid 1px $_primary-white
+      background: $_primary-orange
+      color: $_primary-white
+      padding: 10px 30px
+      letter-spacing: 0.25em
+      text-transform: uppercase
+      transition: all 0.15s linear 0s
+      margin: 30px 0
+
+      &:hover
+        border: solid 1px $_primary-white
+        background: $_primary-white
+        color: $_primary-black
+
+  &.contact
+    padding: 0
+    .bar-title
+      background-color: rgba($_primary-black,0.7)
+
+      .container
+        padding: inherit
