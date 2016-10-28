@@ -85,11 +85,11 @@ html
                     .input-group
                       input.default(type="text",name="holder",id="holder",placeholder="Títular do Cartão")
                     .input-group
-                      input.default(type="text",name="card",id="card",placeholder="Número do Cartão")
+                      input.default(type="text",name="card",id="card",placeholder="Número do Cartão",data-mask="0000.0000.0000.0000")
                     .input-group.half
                       input.default(type="text",name="card",id="card",placeholder="Validade ( MM/YYY )",data-mask="00/0000" ,maxlen="7")
                     .input-group.half
-                      input.default(type="text",name="card",id="card",placeholder="CVC do Cartão")
+                      input.default(type="text",name="card",id="card",placeholder="CVC do Cartão",data-mask="0000",maxlen="4")
                     .input-group.center
                       button.btn(type="submit") Continuar !
           
