@@ -34,17 +34,6 @@
                 addClassActive: false,
                 theme: "slider-theme"
             },
-            TestimonyConfig   = {
-                autoPlay : true,
-                navigation : false,
-                slideSpeed : 300,
-                pagination : false,
-                paginationSpeed : 400,
-                singleItem: true,
-                stopOnHover: false,
-                addClassActive: false,
-                autoHeight: true
-            },
             CausesConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -72,19 +61,71 @@
                     [640, 2],
                     [960, 4]
               ]
-            },
-            aboutSliderConfig = {
-                autoPlay : true,
-                navigation : false,
-                slideSpeed : 300,
-                pagination : true,
-                paginationSpeed : 400,
-                singleItem: true,
-                stopOnHover: false,
-                addClassActive: false,
-                theme: "about-us-owl"
             };
 
+
+
+            function AjaxForm(form)
+            {
+              var $this   = $(form),
+                  action  = $this.attr("action"),
+                  method  = $this.attr("method"),
+                  inputs  = $this.find("input:not(:file):not(:submit):not(:checkbox) , textarea, select, input:hidden, input:checked"),
+                  files   = $this.find("input:file"),
+                  flags   = {},
+                  content = new FormData();
+
+              for (var i = 0; i < inputs.length; ++i){
+                content.append($(inputs[i]).attr("name"), $(inputs[i]).val()); // Add all fields automatic
+              }
+
+              //  Loop & append files with file data
+              if (files.length) {
+                for (var i = 0; i < files.length; ++i) {
+                  if (files[i].files[i] != undefined) {
+                    content.append(files.eq(i).attr("name"), files[i].files[i], files[i].files[i].name); // add files if exits
+                  }
+                }
+              }
+
+              $.ajax({
+                url: action,
+                type: method,
+                data: content,
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                cache: false,
+                success: function (response) {
+                  var status = response.status;
+                  $("#alert-bar").find("h2").text(response.text);
+                  $("#alert-bar").removeClass().addClass(status+" animated slideInUp")
+                  .on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    setTimeout(function(){
+                      $("#alert-bar").removeClass().addClass(status+" animated slideOutDown")
+                      .on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        (response.redirect) ? document.location = response.redirect : null;
+                      });
+                    },3200);
+                  });
+
+                  return false;
+                },
+                error: function () {
+                  $(".alert-bar").find("h2").text(response.text);
+                  $(".alert-bar").removeClass().addClass(status+" animated slideInUp")
+                  .on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    setTimeout(function(){
+                      $(".alert-bar").removeClass().addClass(status+" animated slideOutDown")
+                      .on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        (response.redirect) ? document.location = response.redirect : null;
+                      });
+                    },3200);
+                  });
+                }
+              });
+
+            }
 
         // tabs function
         $tabSet.each(function(){
@@ -187,13 +228,6 @@
             }
         }
 
-        function testinomiesInit()
-        {
-            var owl = $testimoniesWrap.owlCarousel(TestimonyConfig);
-
-            return owl;
-        }
-
         if($('[data-toggle="tooltip"]').length)
         {
           $('[data-toggle="tooltip"]').tooltip();
@@ -243,7 +277,6 @@
         {
             //  google.maps.event.addDomListener(window, 'load', googlemaps() );
             sliderInit();
-            testinomiesInit();
             causesInit();
             partnersInit();
             $.scrollIt({
@@ -286,6 +319,11 @@
           });
           $opt.filter("[checked='checked']").trigger("click");
         }
+
+        $("body").delegate("form[role='AjaxForm']", "submit",function(){
+          AjaxForm(this);
+          return false;
+        })
 
     });
 
